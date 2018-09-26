@@ -1,28 +1,27 @@
-# electron-quick-start
+# Origami Editor
 
-**Clone and run for a quick way to see Electron in action.**
+**About**
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+This is a tool for creating progressive web apps after the Chrome Dev editor fell out of use 
+due to very strict content security policies in the new version of Chrome.
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
 
 ## To Use
+
+I do have monthly builds on this [projects homepage](https://nmcain.github.io/origami) which are availible for easy installations.
+This is reccomended for users with less command line experience.
+
+**Building and running from source**
+
+If you want the latest updates and more features faster, you can clone this repository and build it yourself. If you make a great feature or find a problem, don't forget to create an issue or suggestion. 
 
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/nmcain/origami
 # Go into the repository
-cd electron-quick-start
+cd origami
 # Install dependencies
 npm install
 # Run the app
@@ -31,15 +30,32 @@ npm start
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-## Resources for Learning Electron
+## Updates
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+As you may already be able to tell, there are different branches. Beta has the latest features, but with the latest features, come the latest bugs. You can help by reporting them, or fixing them yourself.
 
 ## License
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+The different APIs and libraries used may have different licenses, but Origami uses the Apache License, with some modifications.
+I don't really see the need for a warranty, but I will provide support (within reason) for this application and I will try to provide support for derivative works that do not. Also please try to credit me and the other contributors in your derivative works.
+
+ Copyright 2018 Noah Cain
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+     [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+[Apache License 2.0](LICENSE.md)
+
+##Donate (maybe?)
+
+[My PayPal](paypal.me/nmcain05)
