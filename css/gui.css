@@ -1,0 +1,183 @@
+
+.controls{
+background:#FFC107;
+    padding: none;
+
+ margin: 0px;
+}
+.toolbar{
+     padding: none;
+background:#e0e0e0;
+ margin: 0px;
+border-bottom:1px solid #e0e0e0;
+    width:100%;
+}
+.cbt{
+    height:40px;
+    width:40px;
+    min-width: 1%;
+}
+.data{
+    height:1px;
+    width:1px;
+    background:transparent;
+    color:transparent;
+    border:none;
+}
+.idbt{
+    width:149px;
+    border:none;
+    height:20px;
+    background:#e0e0e0;
+    margin-left:-12px;
+}
+.idbt:hover{
+
+    border:none;
+    background:#dddddd;
+}
+.idbt:active{
+
+    border:none;
+    background:#cccccc;
+}
+.controlbar{
+    background:#cccccc;
+    width:100%;
+    height:32px;
+
+}
+.nbt{
+    margin-top:2px;
+    margin-left:2px;
+}
+.input{
+
+    width:140px;
+    border:none;
+    height:28px;
+    margin-top:2px;
+    background:#eeeeee;
+}
+.titleup{
+    color:#222222;
+    font-size:16px;
+    margin-top:10px;
+    margin-left:20px;
+}
+.versions2{
+    font-family: 'Roboto', sans-serif;
+    margin-left:25px;
+    padding:none;
+    margin-top:-15px;
+}
+.versions1{
+    font-family: 'Roboto', sans-serif;
+    margin-left:25px;
+    padding:none;
+    margin-top:15px;
+}
+.versions3{
+    font-family: 'Roboto', sans-serif;
+    margin-left:25px;
+    padding:none;
+    margin-top:-15px;
+    margin-bottom: 45px;
+}
+.spcline{
+    background:#676767;
+    width:525px;
+    height:1px;
+    margin-left:30px;
+}
+.cfu{
+    width:525px;
+    height:60px;
+    margin-left:30px;
+}
+.anguframe{
+  height:100%;
+  width:100%;
+}
+.cssheader{
+background:#ffc107;
+}
+.cssedit{
+
+}
+.cssheadertext{
+
+}
+.jssedit{
+
+}
+.fulltop{
+
+  height:100%;
+  width:100%;
+}
+
+
+
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2000;
+    cursor: pointer;
+}
+.settingswin{
+height:400px;
+width:600px;
+background:#ffffff;
+border-radius:3px;
+-webkit-box-shadow: 0px 0px 21px 3px #555555;
+box-shadow: 0px 0px 21px 3px #555555;
+margin-top:100px;
+}
+#settingsf{
+  height:370px;
+  width:100%;
+  border:none;
+  border-radius:3px;
+}
+.close{
+  background:#ffffff;
+  -webkit-border-radius: 0px 3px 0px 0px;
+border-radius: 0px 3px 0px 0px;
+  border:none;
+  color:#333333;
+  height:30px;
+
+}
+.close:hover{
+  background:#ffcdd2;
+  -webkit-border-radius: 0px 3px 0px 0px;
+border-radius: 0px 3px 0px 0px;
+  border:none;
+  color:#c62828;
+
+}
+
+
+}
+.topbarthing{
+  height:30px;
+}
+.sb{
+  border:none;
+  background:#e0e0e0;
+  border-radius:2px;
+  height:20px;
+  float:right;
+}
+.setsw{
+  float:right;
+}

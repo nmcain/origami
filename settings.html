@@ -1,0 +1,728 @@
+<title>Origami - Settings</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-red.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+     <link rel="stylesheet" href="css/window.css" />
+<link rel="stylesheet" href="css/iconography.css" />
+    <link rel="stylesheet" href="css/menus.css" />
+    <link rel="stylesheet" href="css/gui.css" />
+    <link rel="stylesheet" href="css/body.css" />
+    <script src="js/windows.js"></script>
+    <script src="js/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/widget.js"></script>
+    <script src="js/settings.js"></script>
+     <script language="JavaScript" type="text/javascript" src="js/import.js"></script><script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="css/themes/theme-light.css" />
+    <link rel="stylesheet" href="css/emulator.css" />
+
+
+
+
+<style>
+/* width */
+::-webkit-scrollbar {
+   width:0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:transparent;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    border-radius: 2.5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #9e9e9e;
+}
+</style>
+
+
+
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: "Roboto", sans-serif; background:#ffffff;}
+
+/* Style the tab */
+.tab35 {
+    float: left;
+   font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+    width: 102px;
+    height: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab35 button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    height:30px;
+    font-family: "Roboto", sans-serif;
+    width: 100px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+/* Change background color of buttons on hover */
+.tab35 button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab35 button.active {
+    background-color: #ffecb3;
+    border-radius:0px 15px 15px 0px;
+    color:#ff8f00;
+}
+
+/* Style the tab content */
+.tabcontent35 {
+    float: left;
+    padding: 0px 12px;
+
+    height: 300px;
+    font-family: "Roboto", sans-serif;
+}
+    .htitle{
+        color:#ff8f00;
+        font-size:15px;
+         font-family: "Roboto", sans-serif;
+        margin-top:25px;
+        margin-left:15px;
+    }
+    .themes{
+        overflow: auto;
+    }
+    .separate{
+        background:#ffc107;
+        width:450px;
+        height:1px;
+        margin-bottom:10px;
+    }
+    .light{
+       height:75px;
+        width:450px;
+        background:#eeeeee;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    .desc{
+        float:left;
+        font-size:15px;
+        font-family: 'Roboto',  sans-serif;
+        margin-left:25px;
+        margin-top:25px;
+    }
+    .colors{
+       float:right;
+    }
+    .lightprime{
+        background:#ffc107;
+        height:37.5px;
+        width:75px;
+    }
+    .lightsec{
+        background:#bdbdbd;
+        height:37.5px;
+        width:75px;
+    }
+    .id1{
+        float:left;
+        margin-top:20px;
+        margin-left:30px;
+        background:#ffc107;
+    }
+</style>
+
+
+<div class="tab35">
+  <button class="tablinks" onclick="openCity(event, 'Themes')" id="defaultOpen">Themes</button>
+  <button class="tablinks" onclick="openCity(event, 'Emulator')">Emulator</button>
+  <button class="tablinks" onclick="openCity(event, 'Server')">Server</button>
+    <button class="tablinks" onclick="openCity(event, 'Ace')">Ace</button>
+    <button class="tablinks" onclick="openCity(event, 'Widgets')">Widgets</button>
+    <button class="tablinks" onclick="openCity(event, 'Interface')">Interface</button>
+    <button class="tablinks" onclick="openCity(event, 'Help')">Help</button>
+    <button class="tablinks" onclick="openCity(event, 'Developer')">Developer</button>
+    <button class="tablinks" onclick="openCity(event, 'Updates')">Updates</button>
+    <button class="tablinks" onclick="openCity(event, 'Credits')">Credits</button>
+    <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+</div>
+
+<div id="Themes" class="tabcontent35">
+  <p class="htitle">Themes</p>
+    <div class="separate"></div>
+    <div class="themes">
+
+
+
+
+
+
+
+
+    <div class="light">
+        <div align="left">
+        <p class="desc">Default Light (Yellow)</p>
+            <button onclick="lightset()" class="id1 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="lightprime"></div>
+            <div class="lightsec"></div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <style>
+    .darkprime{
+        background:#232323;
+        height:37.5px;
+        width:75px;
+    }
+    .darksec{
+        background:#333333;
+        height:37.5px;
+        width:75px;
+    }
+    .id2{
+        float:left;
+        margin-top:20px;
+        margin-left:144px;
+        background:#232323;
+        color:#ffffff;
+    }
+</style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Dark</p>
+            <button onclick="darkset()" class="id2 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="darkprime"></div>
+            <div class="darksec"></div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+    .blueprime{
+        background:#03a9f4;
+        height:37.5px;
+        width:75px;
+    }
+    .bluesec{
+        background:#bdbdbd;
+        height:37.5px;
+        width:75px;
+    }
+    .id3{
+        float:left;
+        margin-top:20px;
+        margin-left:144px;
+        background:#03a9f4;
+
+    }
+</style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Blue</p>
+            <button onclick="blueset()" class="id3 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="blueprime"></div>
+            <div class="bluesec"></div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <style>
+    .indigoprime{
+        background:#512da8;
+        height:37.5px;
+        width:75px;
+    }
+    .indigosec{
+        background:#bdbdbd;
+        height:37.5px;
+        width:75px;
+    }
+    .id4{
+        float:left;
+        margin-top:20px;
+        margin-left:130px;
+        background:#512da8;
+
+    }
+</style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Indigo</p>
+            <button onclick="indigoset()" class="id4 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="indigoprime"></div>
+            <div class="indigosec"></div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+         <style>
+    .pinkprime{
+        background:#f50057;
+        height:37.5px;
+        width:75px;
+    }
+    .pinksec{
+        background:#bdbdbd;
+        height:37.5px;
+        width:75px;
+    }
+    .id5{
+        float:left;
+        margin-top:20px;
+        margin-left:145px;
+        background:#f50057;
+
+    }
+</style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Pink</p>
+            <button onclick="pinkset()" class="id5 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="pinkprime"></div>
+            <div class="pinksec"></div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <style>
+    .orangeprime{
+        background:#ff5722;
+        height:37.5px;
+        width:75px;
+    }
+    .orangesec{
+        background:#bdbdbd;
+        height:37.5px;
+        width:75px;
+    }
+    .id6{
+        float:left;
+        margin-top:20px;
+        margin-left:125px;
+        background:#ff5722;
+
+    }
+</style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Orange</p>
+            <button onclick="orangeset()" class="id6 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="orangeprime"></div>
+            <div class="orangesec"></div>
+            </div>
+            </div>
+        </div>
+
+        <style>
+    .greenprime{
+        background:#2e7d32;
+        height:37.5px;
+        width:75px;
+    }
+    .greensec{
+        background:#bdbdbd;
+        height:37.5px;
+        width:75px;
+    }
+    .id7{
+        float:left;
+        margin-top:20px;
+        margin-left:130px;
+        background:#2e7d32;
+
+    }
+</style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Green</p>
+            <button onclick="greenset()" class="id7 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="greenprime"></div>
+            <div class="greensec"></div>
+            </div>
+            </div>
+        </div>
+
+        <style>
+    .redprime{
+        background:#f44336;
+        height:37.5px;
+        width:75px;
+    }
+    .redsec{
+        background:#bdbdbd;
+        height:37.5px;
+        width:75px;
+    }
+    .id8{
+        float:left;
+        margin-top:20px;
+        margin-left:145px;
+        background:#f44336;
+
+    }
+</style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Red</p>
+            <button onclick="redset()" class="id8 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Apply theme
+</button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="redprime"></div>
+            <div class="redsec"></div>
+            </div>
+            </div>
+        </div>
+
+
+
+        <style>
+        .grayprime{
+        background:#37474f;
+        height:37.5px;
+        width:75px;
+        }
+        .graysec{
+        background:#bdbdbd;
+        height:37.5px;
+        width:75px;
+        }
+        .id9{
+        float:left;
+        margin-top:20px;
+        margin-left:80px;
+        background:#37474f;
+
+        }
+        </style>
+         <div class="light">
+        <div align="left">
+        <p class="desc">Material Gray</p>
+            <button onclick="grayset()" class="id9 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Apply theme
+        </button>
+        </div>
+        <div align="right">
+        <div class="colors">
+            <div class="grayprime"></div>
+            <div class="graysec"></div>
+            </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<div id="Emulator" class="tabcontent35">
+   <p class="htitle">Emulator</p>
+    <div class="separate"></div>
+
+<div class="emu1"><select class="sb" id="selectBox" onchange="setOrient();">
+   <option value="1">Portrait</option>
+   <option value="2">Landscape</option>
+  </select><p class="switchtext">Display orientation</p>
+
+  <select class="sb" id="selectBoxModel" onchange="setModel();">
+    <option value="1">Nexus 5</option>
+     <option value="2">iPhone 6</option>
+<option value="3">Nexus 6</option>
+<option value="4">Pixel 2 XL</option>
+<option value="5">Pixel 2</option>
+    </select>
+
+
+
+
+ </div>
+
+<div class="emu2"><p class="switchtext2">Device model (Phones only)</p>
+  <select class="sb" id="selectBoxFrame" onchange="setFrame();">
+     <option value="1">On</option>
+     <option value="2">Off</option>
+    </select>
+</div>
+<div class="emu2"><p class="switchtext2">Show device frame</p>
+  <select class="sb" id="selectBoxUi" onchange="setUi();">
+     <option value="1">On</option>
+     <option value="2">Off</option>
+    </select>
+</div>
+<div class="emu2"><p class="switchtext2">Show operating system UI elements</p>
+
+  <select class="sb" id="selectBoxStyle" onchange="setStyle();">
+      <option value="1">none</option>
+     <option value="2">Android 3.0 (Honeycomb)</option>
+     <option value="3">Android 4.0 (KitKat)</option>
+     <option value="4">Android 5.0 (Lollipop)</option>
+     <option value="5">Android 5.1 (Lollipop)</option>
+     <option value="6">Android 6.1 (Marshmallow)</option>
+     <option value="7">Android 7.0 (Nougat)</option>
+     <option value="8">Android 7.0 Pixel (Nougat)</option>
+     <option value="9">Android 8.0 (Oreo)</option>
+     <option value="10">Android 8.0 Pixel(Oreo)</option>
+     <option value="11">Android 9.0 (Pie)</option>
+     <option value="12">Android 9.0 Pixel (Pie)</option>
+     <option value="13">Chromium OS (49.0.0)</option>
+    <option value="14">Chrome OS (Latest)</option>
+      <option value="15">Chrome OS (Pixelbook)</option>
+    <option value="16">Mac OS (High Sierra)</option>
+      <option value="17">iOS 11</option>
+        <option value="18">iOS 11 (iPhone X)</option>
+    <option value="19">Windows XP</option>
+    <option value="20">Windows Vista</option>
+    <option value="21">Windows 7</option>
+    <option value="22">Windows 8</option>
+    <option value="23">Windows 8.1</option>
+    <option value="24">Windows 10</option>
+    <option value="25">Ubuntu 16.04</option>
+    <option value="26">Lubuntu 16.04</option>
+    <option value="27">Ubuntu Gnome 16.04</option>
+      <option value="28">Deepin 15.6</option>
+      <option value="29">Fuchsia OS Capybara (Desktop)</option>
+        <option value="30">Fuchsia OS Armadillo (Mobile)</option>
+
+    </select>
+
+ </div>
+<div class="emu2"><p class="switchtext2">Navbar style</p>
+
+  <select class="sb" id="selectBoxStyle" onchange="setStyle();">
+      <option value="1">Lineage OS</option>
+     <option value="2">Android 3.0 (Honeycomb)</option>
+     <option value="3">Android 4.0 (KitKat)</option>
+     <option value="4">Android 5.0 (Lollipop)</option>
+     <option value="5">Android 5.1 (Lollipop)</option>
+     <option value="6">Android 6.1 (Marshmallow)</option>
+     <option value="7">Android 7.0 (Nougat)</option>
+     <option value="8">Android 7.0 Pixel (Nougat)</option>
+     <option value="9">Android 8.0 (Oreo)</option>
+     <option value="10">Android 8.0 Pixel(Oreo)</option>
+     <option value="11">Android 9.0 (Pie)</option>
+     <option value="12">Android 9.0 Pixel (Pie)</option>
+     <option value="13">Chromium OS (49.0.0)</option>
+    <option value="14">Chrome OS (Latest)</option>
+      <option value="15">Chrome OS (Pixelbook)</option>
+    <option value="16">Mac OS (High Sierra)</option>
+      <option value="17">iOS 11</option>
+        <option value="18">iOS 11 (iPhone X)</option>
+    <option value="19">Windows XP</option>
+    <option value="20">Windows Vista</option>
+    <option value="21">Windows 7</option>
+    <option value="22">Windows 8</option>
+    <option value="23">Windows 8.1</option>
+    <option value="24">Windows 10</option>
+    <option value="25">Ubuntu 16.04</option>
+    <option value="26">Lubuntu 16.04</option>
+    <option value="27">Ubuntu Gnome 16.04</option>
+      <option value="28">Deepin 15.6</option>
+      <option value="29">Fuchsia OS Capybara (Desktop)</option>
+        <option value="30">Fuchsia OS Armadillo (Mobile)</option>
+
+    </select>
+
+ </div>
+<div class="emu2"><p class="switchtext2">Device operating system</p>
+  <select class="sb" id="selectBoxRender" onchange="setRender();">
+     <option value="1">Iframe</option>
+     <option value="2">WebView</option>
+    </select>
+  </div>
+<div class="emu2"><p class="switchtext2">Use WebView component for rendering</p> </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="Server" class="tabcontent35">
+  <p class="htitle">Server</p>
+    <div class="separate"></div>
+
+
+
+
+
+</div>
+
+<div id="Ace" class="tabcontent35">
+   <p class="htitle">Ace</p>
+    <div class="separate"></div>
+</div>
+
+<div id="Widgets" class="tabcontent35">
+   <p class="htitle">Widgets</p>
+    <div class="separate"></div>
+</div>
+
+<div id="Interface" class="tabcontent35">
+  <p class="htitle">Interface</p>
+    <div class="separate"></div>
+</div>
+
+<div id="Help" class="tabcontent35">
+   <p class="htitle">Help</p>
+    <div class="separate"></div>
+</div>
+
+<div id="Developer" class="tabcontent35">
+  <p class="htitle">Developer</p>
+    <div class="separate"></div>
+
+</div>
+
+<div id="Updates" class="tabcontent35">
+  <iframe class="if" src="update.html" style="height:400px; width: 470px;  border:none;"></iframe>
+</div>
+
+<div id="Credits" class="tabcontent35">
+  <p class="htitle">Credits</p>
+    <div class="separate"></div>
+</div>
+
+
+<div id="About" class="tabcontent35">
+  <p class="htitle">About Origami</p>
+    <div class="separate"></div>
+</div>
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent35, tablinks;
+    tabcontent35 = document.getElementsByClassName("tabcontent35");
+    for (i = 0; i < tabcontent35.length; i++) {
+        tabcontent35[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>

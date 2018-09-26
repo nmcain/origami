@@ -1,0 +1,26 @@
+{
+  "name": "Origami",
+  "version": "1.0.0",
+  "productName": "Origami",
+  "description": "A tool to assist users in the creation of PWAs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/nmcain/origami",
+  "keywords": [
+    "Origami",
+    "PWA",
+    "Server",
+    "Application",
+    "demo"
+  ],
+  "author": "Noah Cain",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "npm": "^6.1.0"
+  }
+}

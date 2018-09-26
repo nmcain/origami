@@ -1,0 +1,13 @@
+
+<textarea rows='10' cols='80' id='myTextArea' ></textarea>
+
+<input value='download' type='button'
+onclick='doDL(document.getElementById("myTextArea").value)' />
+
+
+<script type='text/javascript'>
+function doDL(s){
+    function dataUrl(data) {return "data:x-application/text," + escape(data);}
+    window.open(dataUrl(s));
+}
+</script>

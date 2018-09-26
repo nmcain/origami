@@ -1,0 +1,735 @@
+<!doctype html>
+<head>
+   <link rel="stylesheet" href="css/style.css">
+   <script src="js/main.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link href="fonts/productsans/stylesheet.css" rel="stylesheet">
+</head>
+<body onload="startTime()">
+
+    
+    
+    
+<script>
+    $(document).ready(function(){
+       
+$("#jquerytogglemenu").click(function(){
+    $("#menu").fadeToggle();
+});
+        $("#toggleapps").click(function(){
+    $("#smallmenu").slideToggle();
+            
+});
+        $("#togglechrome").click(function(){
+    $("#mydiv").fadeToggle();
+            
+});
+        
+          $("#togglebigapps").click(function(){
+    $("#bigmenu").slideToggle();
+              $("#smallmenu").slideToggle();
+});
+        
+    });
+    
+  
+  function openChrome() {
+      $("#mydiv").fadeToggle();
+      document.getElementById("datnav").style.background="transparent";
+  }
+    function openorigamiopen() {
+      $("#origamiopen").fadeToggle();
+        document.getElementById("datnav").style.background="transparent";
+  }
+    function closeChrome() {
+      $("#mydiv").fadeToggle();
+        document.getElementById("datnav").style.background="transparent";
+  }
+    function preview() {
+      $("#preview").fadeToggle();
+        document.getElementById("datnav").style.background="transparent";
+  }
+    function closeChrome2() {
+      $("#mydiv2").fadeToggle();
+        document.getElementById("datnav").style.background="transparent";
+  }
+     function closeps() {
+      $("#playstore").fadeToggle();
+         document.getElementById("datnav").style.background="transparent";
+  }
+     function origami() {
+      $("#origami").fadeToggle();
+         document.getElementById("datnav").style.background="transparent";
+  }
+    function settings() {
+      $("#settings").fadeToggle();
+        document.getElementById("datnav").style.background="transparent";
+  }
+    function crosh() {
+      $("#crosh").fadeToggle();
+        document.getElementById("datnav").style.background="transparent";
+  }
+    </script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div id="mydiv" style="display:none; top: 142px; left: 463px;">
+  <div id="mydivheader">
+   <div onclick="closeChrome()" class="hovercircle">
+   <i class="material-icons window md-18">close</i>
+       </div>
+      <div onclick="maximizemydiv()" class="hovercircle">
+      <i class="material-icons window md-18">crop_square</i>
+          </div>
+          <div onclick="closeChrome()" class="hovercircle">
+      <i class="material-icons windowmin md-18">remove</i>
+      </div>
+  </div>
+  <iframe class="chromeframe" src="chrome_browser.html">
+    </iframe>
+</div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="origamiopen" style="display:none; top: 142px; left: 463px;">
+  <div id="origamiopenheader">
+   <div onclick="openorigamiopen()" class="hovercircle">
+   <i class="material-icons window md-18">close</i>
+       </div>
+      
+          <div onclick="openorigamiopen()" class="hovercircle">
+      <i class="material-icons windowmin md-18">remove</i>
+      </div>
+  </div>
+  
+        
+        <div class="topheader"><p class="headertext">
+            Origami Test
+            </p></div>
+        <div align="center">
+        <div align="center" class="sector">
+            <p align="left" class="cardtitle">
+                Open Preview
+            </p>
+        <div align="left" class="opencard">
+            
+            <div class="winicon"><i class="wicon md-48 material-icons">aspect_ratio</i></div>
+            <button onclick="preview()" class="mdbt1 mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Open empty preview window
+</button>
+            <style>
+            .mdbt1{
+    float:right;
+    margin-right:50px;
+    margin-top:30px;
+    
+}
+            </style>
+            </div>
+        </div>
+        </div>
+        
+         <div align="center">
+        <div align="center" class="sector">
+            <p align="left" class="cardtitle">
+                Start Emulation
+            </p>
+        <div align="left" class="opencard">
+            
+            <input type="text" id="url" class="input" value="Enter location of file...">  <button onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="embt material-icons">play_arrow</i>
+</button>
+            
+            </div>
+        </div>
+        </div>
+            
+</div>
+    
+    
+    
+    
+    
+    <div id="preview" style="display:none; top: 175px; left: 175px;">
+  <div id="previewheader">
+   <div onclick="preview()" class="hovercircle">
+   <i class="material-icons window md-18">close</i>
+       </div>
+      <div onclick="maximizepreview()" class="hovercircle">
+      <i class="material-icons window md-18">crop_square</i>
+          </div>
+          <div onclick="preview()" class="hovercircle">
+      <i class="material-icons windowmin md-18">remove</i>
+      </div>
+  </div>
+  <iframe id="frame" src="data:text/plain;charset=utf-8,No%20application%20selected.%20Choose%20an%20HTML%20file%20in%20the%20Origami%20test%20app%20and%20click%20the%20run%20button.">
+    </iframe>
+</div>
+    
+    
+    
+    <div id="mydiv2" style="display:none; top: 142px; left: 463px;">
+  <div id="mydiv2header" style="background:#4286F5;">
+   <div onclick="closeChrome2()" class="hovercircle">
+   <i class="material-icons window md-18">close</i>
+       </div>
+      <div onclick="maximizemydiv2()" class="hovercircle">
+      <i class="material-icons window md-18">crop_square</i>
+          </div>
+          <div onclick="closeChrome2()" class="hovercircle">
+      <i class="material-icons windowmin md-18">remove</i>
+      </div>
+  </div>
+  
+   <img src="img/wallpaper/docs.png" class="fakedocs">
+    
+</div>
+
+    
+    
+    
+    
+    
+    
+    <div id="playstore" style="display:none; top: 142px; left: 463px;">
+  <div id="playstoreheader" style="background:#ffffff;">
+   <div onclick="closeps()" class="hovercircle">
+   <i class="material-icons window md-18">close</i>
+       </div>
+      
+          <div onclick="closeps()" class="hovercircle">
+      <i class="material-icons windowmin md-18">remove</i>
+      </div>
+  </div>
+  <div align="center">
+      <div class="psimg"></div>
+   <p class="playstoretitle">
+       Google Play store now on your Chromebook
+        </p>
+      <p class="playstoresub">
+       Choose from over a million apps and games on Google Play to install and use on your Chromebook
+        </p>
+      <p class="playstoreerr">
+       Your device is not eligible for Play Store enrollment. Find a list of supported devices at chromium.org
+        </p>
+      <button class="psbtn mdl-button mdl-js-button mdl-button--raised" disabled>
+  Get started
+</button>
+    </div>
+</div>
+    
+    
+    
+    
+    
+    
+    <div id="origami" style="display:none; top: 175px; left: 175px;">
+  <div id="origamiheader" style="background:#ffa000;">
+   <div onclick="origami()" class="hovercircle">
+   <i class="material-icons window md-18">close</i>
+       </div>
+      <div onclick="maximizeorigami()" class="hovercircle">
+      <i class="material-icons window md-18">crop_square</i>
+          </div>
+          <div onclick="origami()" class="hovercircle">
+      <i class="material-icons windowmin md-18">remove</i>
+      </div>
+  </div>
+  <iframe id="frame2" src="https://nmcain.github.io/origami-pwa/pages/editor-pwamode.html">
+    </iframe>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="settings" style="display:none; top: 142px; left: 463px;">
+  <div id="settingsheader">
+   <div onclick="settings()" class="hovercircle">
+   <i class="material-icons window md-18">close</i>
+       </div>
+      <div onclick="maximizesettings()" class="hovercircle">
+      <i class="material-icons window md-18">crop_square</i>
+          </div>
+          <div onclick="settings()" class="hovercircle">
+      <i class="material-icons windowmin md-18">remove</i>
+      </div>
+  </div>
+  
+         <style>
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:transparent;
+width: 0px;
+    height:0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    border-radius: 2.5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #9e9e9e;
+}
+</style>
+        <div class="topheadersettings"><p class="headertext">
+            Settings
+            </p></div>
+        <div class="network" align="center">
+        <div align="center" class="sector">
+            <p align="left" class="cardtitle">
+               About Chrome OS
+            </p>
+        <div align="left" class="opencard2">
+            <div class="iconabout"></div>
+            <p class="abouttxt">
+             Google Chrome OS
+                
+            </p>
+        <div class="separator-eee"></div>
+            
+            
+             <p class="versiontxt">
+            Version 69.0.3497.58 (Official Build) stable (64-bit)
+                
+            </p>
+            <div class="separator-eee2"></div>
+            <p class="versionflags1">
+                Command Line
+            </p>
+              <p class="versionflags">
+           
+/opt/google/chrome/chrome --ppapi-flash-path=/opt/google/chrome/pepper/libpepflashplayer.so --ppapi-flash-version=30.0.0.142 --ui-prioritize-in-gpu-process --use-gl=egl --enable-native-gpu-memory-buffers --gpu-sandbox-failures-fatal=yes --enable-logging --log-level=1 --use-cras --enable-wayland-server --user-data-dir=/home/chronos --system-developer-mode --login-profile=user --has-chromeos-keyboard --default-wallpaper-large=/usr/share/chromeos-assets/wallpaper/oem_large.jpg --arc-availability=unsupported --is-demo=true
+                
+            </p>
+            </div>
+             
+        </div>
+        </div>
+        
+        
+            
+            
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <div id="crosh" style="display:none; top: 175px; left: 175px;">
+  <div id="croshheader">
+   <div onclick="crosh()" class="hovercircle">
+   <i class="material-icons window md-18">close</i>
+       </div>
+      <div onclick="maximizecrosh()" class="hovercircle">
+      <i class="material-icons window md-18">crop_square</i>
+          </div>
+          <div onclick="crosh()" class="hovercircle">
+      <i class="material-icons windowmin md-18">remove</i>
+      </div>
+  </div>
+  <iframe id="frame" src="console.html">
+    </iframe>
+</div>
+    
+    
+    
+    
+    
+    
+    
+<script>
+function dragElement(n){var t=0,o=0,u=0,d=0;function e(e){(e=e||window.event).preventDefault(),u=e.clientX,d=e.clientY,document.onmouseup=l,document.onmousemove=m}function m(e){(e=e||window.event).preventDefault(),t=u-e.clientX,o=d-e.clientY,u=e.clientX,d=e.clientY,n.style.top=n.offsetTop-o+"px",n.style.left=n.offsetLeft-t+"px"}function l(){document.onmouseup=null,document.onmousemove=null}document.getElementById(n.id+"header")?document.getElementById(n.id+"header").onmousedown=e:n.onmousedown=e}dragElement(document.getElementById("mydiv"));
+    function dragElement(n){var t=0,o=0,u=0,d=0;function e(e){(e=e||window.event).preventDefault(),u=e.clientX,d=e.clientY,document.onmouseup=l,document.onmousemove=m}function m(e){(e=e||window.event).preventDefault(),t=u-e.clientX,o=d-e.clientY,u=e.clientX,d=e.clientY,n.style.top=n.offsetTop-o+"px",n.style.left=n.offsetLeft-t+"px"}function l(){document.onmouseup=null,document.onmousemove=null}document.getElementById(n.id+"header")?document.getElementById(n.id+"header").onmousedown=e:n.onmousedown=e}dragElement(document.getElementById("crosh"));
+    function dragElement(n){var t=0,o=0,u=0,d=0;function e(e){(e=e||window.event).preventDefault(),u=e.clientX,d=e.clientY,document.onmouseup=l,document.onmousemove=m}function m(e){(e=e||window.event).preventDefault(),t=u-e.clientX,o=d-e.clientY,u=e.clientX,d=e.clientY,n.style.top=n.offsetTop-o+"px",n.style.left=n.offsetLeft-t+"px"}function l(){document.onmouseup=null,document.onmousemove=null}document.getElementById(n.id+"header")?document.getElementById(n.id+"header").onmousedown=e:n.onmousedown=e}dragElement(document.getElementById("settings"));
+    function dragElement(n){var t=0,o=0,u=0,d=0;function e(e){(e=e||window.event).preventDefault(),u=e.clientX,d=e.clientY,document.onmouseup=l,document.onmousemove=m}function m(e){(e=e||window.event).preventDefault(),t=u-e.clientX,o=d-e.clientY,u=e.clientX,d=e.clientY,n.style.top=n.offsetTop-o+"px",n.style.left=n.offsetLeft-t+"px"}function l(){document.onmouseup=null,document.onmousemove=null}document.getElementById(n.id+"header")?document.getElementById(n.id+"header").onmousedown=e:n.onmousedown=e}dragElement(document.getElementById("origami"));
+    function dragElement(n){var t=0,o=0,u=0,d=0;function e(e){(e=e||window.event).preventDefault(),u=e.clientX,d=e.clientY,document.onmouseup=l,document.onmousemove=m}function m(e){(e=e||window.event).preventDefault(),t=u-e.clientX,o=d-e.clientY,u=e.clientX,d=e.clientY,n.style.top=n.offsetTop-o+"px",n.style.left=n.offsetLeft-t+"px"}function l(){document.onmouseup=null,document.onmousemove=null}document.getElementById(n.id+"header")?document.getElementById(n.id+"header").onmousedown=e:n.onmousedown=e}dragElement(document.getElementById("mydiv2"));
+    function dragElement(n){var t=0,o=0,u=0,d=0;function e(e){(e=e||window.event).preventDefault(),u=e.clientX,d=e.clientY,document.onmouseup=l,document.onmousemove=m}function m(e){(e=e||window.event).preventDefault(),t=u-e.clientX,o=d-e.clientY,u=e.clientX,d=e.clientY,n.style.top=n.offsetTop-o+"px",n.style.left=n.offsetLeft-t+"px"}function l(){document.onmouseup=null,document.onmousemove=null}document.getElementById(n.id+"header")?document.getElementById(n.id+"header").onmousedown=e:n.onmousedown=e}dragElement(document.getElementById("origamiopen"));
+    function dragElement(n){var t=0,o=0,u=0,d=0;function e(e){(e=e||window.event).preventDefault(),u=e.clientX,d=e.clientY,document.onmouseup=l,document.onmousemove=m}function m(e){(e=e||window.event).preventDefault(),t=u-e.clientX,o=d-e.clientY,u=e.clientX,d=e.clientY,n.style.top=n.offsetTop-o+"px",n.style.left=n.offsetLeft-t+"px"}function l(){document.onmouseup=null,document.onmousemove=null}document.getElementById(n.id+"header")?document.getElementById(n.id+"header").onmousedown=e:n.onmousedown=e}dragElement(document.getElementById("preview"));
+    function dragElement(n){var t=0,o=0,u=0,d=0;function e(e){(e=e||window.event).preventDefault(),u=e.clientX,d=e.clientY,document.onmouseup=l,document.onmousemove=m}function m(e){(e=e||window.event).preventDefault(),t=u-e.clientX,o=d-e.clientY,u=e.clientX,d=e.clientY,n.style.top=n.offsetTop-o+"px",n.style.left=n.offsetLeft-t+"px"}function l(){document.onmouseup=null,document.onmousemove=null}document.getElementById(n.id+"header")?document.getElementById(n.id+"header").onmousedown=e:n.onmousedown=e}dragElement(document.getElementById("playstore"));
+</script>
+
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+        <div style="display: none;" align="center" id="smallmenu" class="smallmenu">
+    
+            <div onclick="adminDisabled()" class="gsearchbar"><div class="gicon"></div>
+                <p id="launchbar" class="searchtxt">
+                Search your device, apps, web..
+                </p>
+            </div>
+            
+            
+            
+            
+         
+            <div class="appscontainer">
+            <div id="togglechrome" class="application">
+            <div class="appicon-chrome"></div>
+                <div class="appname">Chrome</div>
+            </div>
+            
+            <div onclick="openorigamiopen()" class="application">
+            <div class="appicon-ogtest"></div>
+                <div class="appname">Origami Test</div>
+            </div>
+            
+             <div onclick="closeps()" class="application">
+            <div class="appicon-playstore"></div>
+                <div class="appname">Play Store</div>
+            </div>
+            
+             <div onclick="origami()"  class="application">
+            <div class="appicon-origami"></div>
+                <div class="appname">Origami</div>
+            </div>
+            
+            <div class="application">
+            <div class="appicon-weather"></div>
+                <div class="appname">Weather</div>
+            </div>
+    </div>
+            
+            
+            <div align="center">
+           <div id="togglebigapps" class="expandbiglauncher" align="center"><i class="expandicon material-icons">expand_less</i></div>
+            </div>
+            
+            
+            
+    </div>
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    <div  style="display: none;" align="center" id="bigmenu" class="bigmenu">
+    
+            <div onclick="bigAdminDisabled()" class="gsearchbar2"><div class="gicon2"></div>
+                <p id="launchbar2" class="searchtxt2">
+                Search your device, apps, web..
+                </p>
+            </div>
+            
+            
+            
+            
+         
+            <div class="appscontainer">
+            <div onclick="openChrome()" class="application">
+            <div class="appicon-chrome" ></div>
+                <div class="appname">Chrome</div>
+            </div>
+            
+            <div onclick="openorigamiopen()" class="application">
+            <div class="appicon-ogtest"></div>
+                <div class="appname">Origami Test</div>
+            </div>
+            
+             <div onclick="closeps()" class="application">
+            <div class="appicon-playstore"></div>
+                <div class="appname">Play Store</div>
+            </div>
+            
+             <div onclick="origami()" class="application">
+            <div class="appicon-origami"></div>
+                <div class="appname">Origami</div>
+            </div>
+            
+            <div class="application">
+            <div class="appicon-weather"></div>
+                <div class="appname">Weather</div>
+            </div>
+    </div>
+          <div class="allapps"><p class="pillname">
+              ALL APPS
+              </p></div>
+            
+            
+             <div class="appscontainer2">
+            <div onclick="openChrome()" class="application">
+            <div class="appicon-chrome"></div>
+                <div class="appname">Chrome</div>
+            </div>
+            
+            <div onclick="closeChrome2()" class="application">
+            <div class="appicon-docs"></div>
+                <div class="appname">Google Docs</div>
+            </div>
+            
+             <div onclick="closeChrome2()" class="application">
+            <div class="appicon-drive"></div>
+                <div class="appname">Google Drive</div>
+            </div>
+            
+             <div onclick="origami()" class="application">
+            <div class="appicon-origami"></div>
+                <div class="appname">Origami</div>
+            </div>
+            
+            <div onclick="closeps()" class="application">
+            <div class="appicon-playstore"></div>
+                <div class="appname">Play Store</div>
+            </div>
+    </div>
+            
+        
+         <div class="appscontainer3">
+             
+            <div onclick="settings()" class="application">
+            <div class="appicon-settings"></div>
+                <div class="appname">Settings</div>
+            </div>
+            
+            <div onclick="openorigamiopen()" class="application">
+            <div class="appicon-ogtest"></div>
+                <div class="appname">Origami Test</div>
+            </div>
+           
+            <div class="application">
+            <div class="appicon-weather"></div>
+                <div class="appname">Weather</div>
+            </div>
+             
+             
+              <div onclick="crosh()" class="application">
+            <div class="appicon-terminal"></div>
+                <div class="appname">Terminal</div>
+            </div>
+             
+    </div>
+        
+        
+            
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div align=right>
+<a style="display: none;" class="other" id="menu" name="f">
+<div class="main25">
+
+
+
+
+<div class="user">
+
+  <div class="icon">
+  </div>
+  <div class="username">Origami Guest</div>
+   <!-- <div class="email">nmcain@gmail.com</div>-->
+  <button class="mdbt mdl-button mdl-js-button mdl-js-ripple-effect">
+  Sign out
+</button>
+</div>
+    
+
+  <div class="kb">
+    
+    <i class="kbicon material-icons">keyboard</i>
+    <div class="grow">US keyboard</div>
+    <i class="grow2 material-icons">chevron_right</i>
+  </div>
+
+
+
+<div class="wifi">
+     
+    <i class="wificon material-icons">wifi_lock</i>
+    <div class="grow3">Network</div>
+    <i class="grow4 material-icons">chevron_right</i>
+  </div>
+  
+  
+  
+  
+  
+  <div class="bt2">
+   
+    <i class="bticon material-icons">bluetooth</i>
+    <div class="grow5">Bluetooth</div>
+    <i class="grow6 material-icons">chevron_right</i>
+  </div>
+
+
+
+
+
+<div class="cast">
+   
+    <i class="casticon material-icons">cast</i>
+    <div class="growcast">Cast</div>
+    <i class="growcast2 material-icons">chevron_right</i>
+  </div>
+
+
+
+
+
+
+<div class="volume_up">
+     
+    <i class="volume_upicon material-icons">volume_up</i>
+    <div class="spacerv"></div>
+     <input style"margin-top:15px;" class="mdl-slider mdl-js-slider" type="range" min="0" max="100" value="80" tabindex="0"/>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="settings">
+
+    <i class="settings2icon material-icons">settings</i>
+    <div class="settingscast">Settings</div>
+    <i class="settingscast2 material-icons">chevron_right</i>
+  </div>
+
+<div class="notify">
+    
+    <i class="notifyicon material-icons">notifications</i>
+    <div class="notifycast">Notifications</div>
+    <i class="notifycast2 material-icons">chevron_right</i>
+  </div>
+
+
+
+<div class="final">
+    
+  <div class="date">Wednesday, February 28</div>
+   <button class="menuicons finalcast mdl-button mdl-js-button mdl-button--icon">
+      <i class="finalcast material-icons">help_outline</i>
+    </button>
+    <button class="menuicons finalcast mdl-button mdl-js-button mdl-button--icon">
+      <i class="material-icons">power_settings_new</i>
+    </button>
+    <button class="menuicons finalcast mdl-button mdl-js-button mdl-button--icon">
+      <i class="material-icons">lock_outline</i>
+    </button>
+  </div>
+
+
+
+
+
+
+  
+</div>
+</a>
+</div>
+    
+    
+  
+  <div id="datnav" class="navbar">
+    
+ <button onclick="hideBigMenu()" id="toggleapps" class="ripple menuicon"><i class="material-icons md-18 launcherico">panorama_fish_eye</i></button>
+      <div onclick="openChrome()" class="chromeicon"></div>
+ <div onclick="openorigamiopen()" class="demoicon"></div>
+ <div onclick="closeChrome2()" class="docsicon"></div>
+  <div onclick="closeps()" class="playicon"></div>
+    <div onclick="origami()" class="origamiicon"></div>
+      <div onclick="settings()" class="settingsicon"></div>
+      <div onclick="closeChrome2()" class="driveicon"></div>
+      <div onclick="crosh()" class="terminalicon"></div>
+      <div class="weathericon"></div>
+      
+      
+      <button onclick="hideBigMenu()" id="jquerytogglemenu" class="ripple usermenu"><div id="txt" class="md-10 useroicon"></div><i class="useroicon material-icons md-15">domain</i><i class="useroicon material-icons md-15">wifi_lock</i><i class="useroicon material-icons md-15">battery_charging_full</i><i class="material-icons usericonmenu">cloud_circle</i></button>
+      <button class="ripple notifymenu"><i class="notif material-icons md-18">notifications</i></button>
+      
+</div>
+
+
+
+
+</body>

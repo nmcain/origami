@@ -1,0 +1,84 @@
+<title>Origami - Emulator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-red.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+     <link rel="stylesheet" href="css/window.css" />
+<link rel="stylesheet" href="css/iconography.css" />
+    <link rel="stylesheet" href="css/menus.css" />
+    <link rel="stylesheet" href="css/gui.css" />
+    <link rel="stylesheet" href="css/body.css" />
+        <link rel="stylesheet" href="css/tabs.css" />
+    <script src="js/windows.js"></script>
+    <script src="js/popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/widget.js"></script>
+     <script language="JavaScript" type="text/javascript" src="js/import.js"></script><script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="css/themes/theme-light.css" />
+    <link rel="stylesheet" href="css/emulator.css" />
+<style>
+/* width */
+::-webkit-scrollbar {
+   width:0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:transparent;
+    
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #BDBDBD; 
+    border-radius: 2.5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #9e9e9e; 
+}
+</style>
+     <div id="title-bar">
+          <div id="title">Origami - Emulator</div>
+          <div id="title-bar-btns">
+              <button class="btn" id="min-btn"><i class="wcn material-icons">expand_more</i></button>
+               <button class="btn" id="max-btn"><i class="wcn material-icons">expand_less</i></button>
+               <button class="btn" id="close-btn"><i class="wcn material-icons">close</i></button>
+          </div>
+     </div>
+<div class="emucont"> 
+    
+    
+    <input type="text" id="url" class="input2" value="Enter location of file...">  <button onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="nembt1 material-icons">play_arrow</i>
+</button>
+             <button onclick="emuWindow()" class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="nembt1 material-icons">tap_and_play</i>
+</button>
+    
+    
+    
+    <button class="nbt mdl-button mdl-js-button mdl-button--icon">
+  <i class="nembt1 material-icons">settings</i>
+</button>
+             
+              <button id="close-btn" class="nbt mdl-button mdl-js-button mdl-button--icon">
+  <i class="nembt2 material-icons">home</i>
+</button>
+             
+              <button class="nbt mdl-button mdl-js-button mdl-button--icon">
+  <i class="nembt3 material-icons">devices_other</i>
+</button>
+             
+              <button class="nbt mdl-button mdl-js-button mdl-button--icon">
+  <i class="nembt4 material-icons">loop</i>
+</button>
+             
+             <button onclick="emuWindow()" class="nbt mdl-button mdl-js-button mdl-button--icon">
+  <i class="nembt5 material-icons">airplay</i>
+</button></div>
+
+
+ <div align="center"><div align="center"><div class="emulator2"> <div class="phone2"><iframe id="frame" class="phrame2" src="open.html"></iframe></div></div></div></div>

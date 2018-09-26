@@ -1,0 +1,58 @@
+.controls{
+background:#FFC107;
+}
+.toolbar{
+background:#e0e0e0;
+border-bottom:1px solid #e0e0e0;
+}
+.idbt{
+    border:none;
+    background:#e0e0e0;
+}
+.idbt:hover{
+    border:none;
+    background:#dddddd;
+}
+.idbt:active{
+    border:none;
+    background:#cccccc;
+}
+.tab {
+ border-right:1px solid #BDBDBD;
+    background-color: #eeeeee;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: transparent;
+    color: black;
+}
+.tab button:hover {
+    background-color: #ddd;
+}
+.tab button.active {
+    background-color: #ccc;
+    border-radius:0px 15px 15px 0px;
+}
+.tabcontent {
+    border-right:1px solid #BDBDBD;
+}
+body {
+    background:#eeeeee;
+}
+#title-bar {
+ background-color: #FFA000;
+}
+#title {
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
+}
+#title-bar-btns {
+    color:#ffffff;
+}
+.btn{ 
+    background:transparent;
+}
+.btn:hover{
+    background:#ffb638;
+}

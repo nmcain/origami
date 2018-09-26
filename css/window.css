@@ -1,0 +1,69 @@
+body {
+
+ padding: 0px;
+
+ margin: 0px; 
+
+    background:#eeeeee;
+}
+
+
+
+
+#title-bar {
+
+ -webkit-app-region: drag;
+
+ height: 30px; 
+
+ background-color: #FFA000;
+
+ padding: none;
+
+ margin: 0px; 
+
+}
+
+
+
+#title {
+
+ position: fixed;
+
+ top: 0px;
+
+ left: 6px; 
+
+    font-family: 'Roboto', sans-serif;
+    
+    font-size:15px;
+    margin-top:6px;
+    color:#fff;
+}
+
+
+
+#title-bar-btns {
+
+ -webkit-app-region: no-drag;
+
+ position: fixed;
+
+ top: 0px;
+
+ right: 2px;
+    
+    color:#ffffff;
+
+  
+}
+.btn{
+    height:30px; 
+    background:transparent;
+    border:none;
+}
+.btn:hover{
+    height:30px; 
+    background:#ffb638;
+    border:none;
+}

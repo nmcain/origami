@@ -1,0 +1,173 @@
+<title>Origami - Documentation</title>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-red.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+     <link rel="stylesheet" href="../css/window.css" />
+<link rel="stylesheet" href="../css/iconography.css" />
+    <link rel="stylesheet" href="../css/menus.css" />
+    <link rel="stylesheet" href="../css/gui.css" />
+    <link rel="stylesheet" href="../css/body.css" />
+        <link rel="stylesheet" href="../css/tabs.css" />
+    <script src="js/windows.js"></script>
+
+    <script src="../js/popup.js"></script>
+    <script src="../js/controls.js"></script>
+        <script src="../js/download.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="../src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/widget.js"></script>
+      <script src="../js/jquery.js"></script>
+     <script language="JavaScript" type="text/javascript" src="js/import.js"></script><script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="../css/themes/theme-light.css" />
+    <link rel="stylesheet" href="../css/emulator.css" />
+    <script>
+    var searchBox = document.querySelector("input");
+var resultList = document.getElementById("resultList");
+var resultsArray = [
+	"Walt Disney",
+	"Which color do you like?",
+	"Where are we?",
+	"Which wells are the best?",
+	"Who's on first?",
+	"Cowboys wear white",
+	"Wells are awesome!",
+	"Whoooppppeeeeee",
+	"Which Witch is Which",
+	"What's going on?",
+	"Well look at that!"
+];
+
+
+searchBox.addEventListener('keyup', function() {
+	var searchTerm = searchBox.value.toLowerCase();
+
+	// reset ul by removing all li items
+	while (resultList.hasChildNodes()) {
+		resultList.removeChild(resultList.lastChild);
+	}
+
+	// loop through array of sentences
+ 	for (var i = 0; i < resultsArray.length; i++) {
+		// if the array item starts with the search value AND the input box is not empty
+		if(resultsArray[i].toLowerCase().startsWith(searchTerm) && searchTerm != "") {
+			var li = document.createElement('li'); // create an li item
+			li.innerHTML = resultsArray[i]; // add the sentence to the new li item
+			resultList.append(li); // add new li item to resultList ul
+		}
+	}
+
+	// if resultList is empty after going through loop display 'no results found'
+	if (!resultList.hasChildNodes() && searchTerm != "") {
+		var li = document.createElement('li');
+		li.innerHTML = "no results found";
+		resultList.append(li);
+	}
+});
+    </script>
+  <script>if (window.module) module = window.module;</script>
+
+<style>
+.mdl-layout__drawer-button > .material-icons{
+  margin-top:11px;
+}
+
+form {
+	width: 100%;
+	margin: 0 auto;
+	border: none;
+}
+input {
+	width: 600px;
+	height: 50px;
+	padding: 5px 10px;
+	border:none;
+  background:#F4B400;
+  font-family:'Roboto',sans-serif;
+	font-size: 16px;
+  margin-left:100px;
+  border-radius:5px;
+}
+input:focus {
+	outline: none;
+}
+button {
+	font-size: 18px;
+	padding: 8px 10px;
+	width: 100px;
+	float: right;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+	background-color: #fff;
+	width: 473px;
+	padding: 6px 10px;
+}
+li:first-of-type {
+	padding-top: 50px;
+}
+
+</style>
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Origami Editor
+
+
+      </span>
+
+      <div align="center"><form>
+    <input type="text" name="search"/>
+    </form>
+
+
+</div>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Origami Editor
+
+
+
+
+</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+
+<div class="card">
+  <style>
+  .card{
+
+  }
+  </style>
+<div class="cardimg1"><p class="cardtitle"></p></div>
+</div>
+
+
+    </div>
+  </main>
+</div>

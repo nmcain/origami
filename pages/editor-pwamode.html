@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Origami Editor</title>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-red.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+     <link rel="stylesheet" href="../css/window.css" />
+<link rel="stylesheet" href="../css/iconography.css" />
+    <link rel="stylesheet" href="../css/menus.css" />
+    <link rel="stylesheet" href="../css/gui.css" />
+    <link rel="stylesheet" href="../css/body.css" />
+        <link rel="stylesheet" href="../css/tabs.css" />
+    
+    
+    <script src="../js/windows.js"></script>
+    
+    <meta name="msapplication-navbutton-color" content="#ffa000">
+<link rel="shortcut icon" type="image/png" href="../img/icon/icon.png"/>
+<link rel="shortcut icon" type="image/png" href="../img/icon/icon.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--<script src="js/utils.js"></script>
+    <script src="js/blob.js"></script>
+    <script src="js/filesaver.js"></script>
+
+<script src="js/core.js"></script>-->
+<link rel="manifest" href="../pwa-manifest.json">
+
+<meta name=”theme-color” content=”#FFA000″>
+    <script src="../js/popup.js"></script>
+    <script src="../js/controls.js"></script>
+        <script src="../js/download.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <script src="../src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/widget.js"></script>
+      <script src="../js/jquery.js"></script>
+     <script language="JavaScript" type="text/javascript" src="../js/import.js"></script><script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <div id="theme">   <link  rel="stylesheet" href="../css/themes/theme-default.css" /></div>
+    <link rel="stylesheet" href="../css/emulator.css" />
+
+  <script>if (window.module) module = window.module;</script>
+
+
+
+
+
+
+
+</head>
+<body id="body">
+     
+     <div id="content">
+
+
+
+<div align="center" id="overlay" onclick="off()"><div class="settingswin">
+  <div align="right">
+  <div class="topbarthing">
+
+  <button class="close" onclick="off()"><i class="material-icons">close</i></button>
+</div>
+  </div>
+
+<iframe id="settingsf" src="../settings.html"></iframe>
+
+
+</div></div>
+
+<div class="controls">
+
+    <div class="dropdown">
+  <button class="dropb dropbtn">File</button>
+  <div class="dropc dropdown-content">
+      <a onclick="doDL(editor.getSession().getValue())" href="#">Save</a>
+
+      <a href="#" onclick='doDL(editor.getSession().getValue())'>Save As</a>
+    <a href="#">New Project</a>
+      <a href="#">New File</a>
+    <a onclick='Open()' href="#">Open</a>
+      <a onclick='Open()' href="#">Open File</a>
+      <a href="#">Home</a>
+      <a id="close-btn">Quit</a>
+  </div></div>
+
+    <div class="dropdown2">
+  <button class="dropb dropbtn2">Edit</button>
+  <div class="dropc dropdown-content2">
+      <a onclick="undo()" href="#">Undo</a>
+      <a onclick="redo()" href="#">Redo</a>
+    <a href="#">Indent More</a>
+      <a href="#">Indent Less</a>
+    <a href="#">Autocomplete</a>
+      <a href="#">Open File</a>
+      <a href="#">Autocomplete</a>
+      <a href="#">Comment/Uncomment</a>
+      <a onclick="on()" href="#">Settings</a>
+
+  </div></div>
+
+    <div class="dropdown3">
+  <button class="dropb dropbtn3">View</button>
+  <div class="dropc dropdown-content3">
+      <a href="#">Mobile Layout</a>
+      <a href="#">Desktop Layout</a>
+    <a href="#">Landscape Mode</a>
+      <a href="#">Portrait Mode</a>
+    <a href="#">Change device frame</a>
+
+  </div></div>
+        <div class="dropdown4">
+  <button class="dropb dropbtn4">Run</button>
+  <div class="dropc dropdown-content4">
+      <a href="#">Open Server Config</a>
+      <a onclick="document.getElementById('frame').src = document.getElementById('url').value;" href="#">Run</a>
+    <a href="#">Emulate Device</a>
+    </div></div>
+
+        <div class="dropdown5">
+  <button class="dropb dropbtn5">Tools</button>
+  <div class="dropc dropdown-content5">
+      <a onclick="nofeature()" href="#">Start Server</a>
+      <a onclick="nofeature()" href="#">Get Server</a>
+    <a href="#">Git Menu</a>
+      <a href="#">Clone git repository</a>
+    <a href="#">Open existing repository</a>
+      <a onclick="nofeature()" href="#">Sign into Github</a>
+      <a onclick="nofeature()" href="#">Sign into Gitlab</a>
+      <a href="#">Go to Github</a>
+      <a href="#">Go to Gitlab</a>
+      <a href="#">Color Picker</a>
+            <a onclick="emuWindow()" href="#">Emulator</a>
+       <a onclick="emuWindow()" href="#">Browser</a>
+       <a onclick="emuWindow()" href="#">Calculator</a>
+      <a onclick="emuWindow()" href="#">Notepad</a>
+      <a href="#">Templates</a>
+  </div></div>
+
+            <div class="dropdown65">
+  <button class="dropb dropbtn65">Settings</button>
+  <div class="dropc dropdown-content65">
+      <a onclick="darkset()" href="#">Dark Mode</a>
+      <a href="#">Fullscreen</a>
+      <a href="#">Distraction-Free</a>
+      <a href="#">Monochrome mode</a>
+    <a href="#">Hide Emulator</a>
+      <a onclick="update()" href="#">Reset</a>
+
+  </div></div>
+
+        <div class="dropdown6">
+  <button class="dropb dropbtn6">Help</button>
+  <div class="dropc dropdown-content6">
+      <a href="#">About</a>
+      <a href="#">Tips</a>
+      <a href="#">Documentation</a>
+      <a href="mailto:nmcain+origami@gmail.com">Contact Developer</a>
+    <a href="mailto:nmcain+errors@gmail.com">Report issue</a>
+      <a onclick="update()" href="#">Check for updates</a>
+      <a onclick="on()" href="#">Settings</a>
+  </div></div>
+
+</div>
+
+
+<div id="name" style="display:none;">
+  <td>Enter file name:</td>
+  <td><input type="text" id="filename" name="filename" placeholder="filename.txt" style="width:150px; padding:5px;"></td>
+  <td><input type="button" id="save" name="save" value="Save" onclick="saveFile()" style="padding:5px 10px 5px 10px; margin:0px"></td>
+  <td><input type="button" id="cancel" name="cancel" value="Cancel" onclick="cancelSaveFile()" style="padding:5px; margin:0px"></td>
+</div>
+<input type="file" multiple style="display:none;" id="fileElem" name="fileElem[]" style="visibility:hidden; width:30px" onchange="loadFile()">
+
+     <div class="toolbar">
+         <button onclick='doDL(editor.getSession().getValue())' class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="save material-icons">save</i>
+</button>
+         <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="home material-icons">home</i>
+</button>
+          <button onclick="on()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="settings material-icons">settings</i>
+</button>
+          <button onclick="undo()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="undo material-icons">undo</i>
+</button>
+         <button onclick="redo()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="redo material-icons">redo</i>
+</button>
+          <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="share material-icons">share</i>
+</button>
+         <button onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="build material-icons">build</i>
+</button>
+          <button onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="play material-icons">play_arrow</i>
+</button>
+          <button onclick="openTerminal()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="polymer material-icons">polymer</i>
+</button>
+         <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="pick material-icons">color_lens</i>
+</button>
+          <button onclick="openTerminal()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="devmode material-icons">developer_mode</i>
+</button>
+          <button onclick="nofeature()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="lock material-icons">wifi_lock</i>
+</button>
+         <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="devices material-icons">devices</i>
+</button>
+         <button onclick="nofeature()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="dns material-icons">dns</i>
+</button>
+         <button class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="err material-icons">error</i>
+</button>
+          <button onclick="pasteText()" class="cbt mdl-js-ripple-effect mdl-button mdl-js-button mdl-button--primary">
+  <i class="ins material-icons">
+assignment_returned
+</i>
+</button>
+         </div>
+
+
+<div class="fulltop">
+         <div class="stuff">
+         <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Widgets')" id="defaultOpen">Widgets</button>
+               <button class="tablinks" onclick="openCity(event, 'Buttons')" >Buttons</button>
+             <button class="tablinks" onclick="openCity(event, 'Libraries')" >Libraries</button>
+             <button class="tablinks" onclick="openCity(event, 'Meta')" >Meta</button>
+  <button class="tablinks" onclick="openCity(event, 'Layout')">Layout</button>
+             <button class="tablinks" onclick="openCity(event, 'Text')">Text</button>
+             <button class="tablinks" onclick="openCity(event, 'Views')">Views</button>
+  <button class="tablinks" onclick="openCity(event, 'Cards')">Cards</button>
+               <button class="tablinks" onclick="openCity(event, 'Inline')">Inline</button>
+             <button class="tablinks" onclick="openCity(event, 'Other')">Other</button>
+</div>
+
+<div id="Widgets" class="tabcontent">
+
+    <input type="text" value=' <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2"> <input type="checkbox" id="checkbox-2" class="mdl checkbox__input"><span class="mdl-checkbox__label">Checkbox</span></label>' class="data" id="myInput">
+<button class="idbt" onclick="myFunction()">Checkbox</button>
+
+ <input type="text" value=' <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+  <span class="mdl-radio__label">Second</span>
+</label>' class="data" id="radio">
+<button class="idbt" onclick="myFunction2()">Radio</button>
+
+<input type="text" value=' <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-2">
+  <input type="checkbox" id="icon-toggle-2" class="mdl-icon-toggle__input">
+  <i class="mdl-icon-toggle__label material-icons">format_italic</i>
+</label>' class="data" id="radio3">
+<button class="idbt" onclick="myFunction3()">Icon Toggle</button>
+
+    <input type="text" value=' <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+  <span class="mdl-radio__label">Second</span>
+</label>' class="data" id="radio4">
+<button class="idbt" onclick="myFunction4()">Switch</button>
+
+      <input type="text" value=' <span class="mdl-chip">
+    <span class="mdl-chip__text">Basic Chip</span>
+</span>' class="data" id="radio5">
+<button class="idbt" onclick="myFunction5()">Chip</button>
+
+         <input type="text" value=' <span class="mdl-chip mdl-chip--deletable">
+    <span class="mdl-chip__text">Deletable Chip</span>
+    <button type="button" class="mdl-chip__action"><i class="material-icons">cancel</i></button>
+</span>' class="data" id="radio6">
+<button class="idbt" onclick="myFunction6()">Deletable Chip</button>
+
+
+
+         <input type="text" value=' <span class="mdl-chip mdl-chip--contact">
+    <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+    <span class="mdl-chip__text">Contact Chip</span>
+</span>' class="data" id="radio7">
+<button class="idbt" onclick="myFunction7()">Contact Chip</button>
+
+         <input type="text" value=' <span class="mdl-chip mdl-chip--contact mdl-chip--deletable">
+    <img class="mdl-chip__contact" src="/templates/dashboard/images/user.jpg"></img>
+    <span class="mdl-chip__text">Deletable Contact Chip</span>
+    <a href="#" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+</span> ' class="data" id="radio8">
+<button class="idbt" onclick="myFunction8()">Deletable Chip</button>
+
+
+         <input type="text" value=' <input class="mdl-slider mdl-js-slider" type="range"
+  min="0" max="100" value="0" tabindex="0"> ' class="data" id="radio9">
+<button class="idbt" onclick="myFunction9()">Slider</button>
+
+
+         <input type="text" value=' <!-- Slider with Starting Value -->
+<input class="mdl-slider mdl-js-slider" type="range"
+  min="0" max="100" value="25" tabindex="0"> ' class="data" id="radio10">
+<button class="idbt" onclick="myFunction10()">Slider Value</button>
+
+         </div>
+
+         <div id="Buttons" class="tabcontent">
+
+  <input type="text" value=' <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">add</i>
+</button>
+ ' class="data" id="radio11">
+<button class="idbt" onclick="myFunction11()">Colored Fab</button>
+
+              <input type="text" value='<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+  <i class="material-icons">add</i>
+</button> ' class="data" id="radio12">
+<button class="idbt" onclick="myFunction12()">Plain Fab</button>
+          <input type="text" value=' <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+  Button
+</button> ' class="data" id="radio13">
+<button class="idbt" onclick="myFunction13()">Raised Button</button>
+          <input type="text" value=' <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+  Button
+</button>' class="data" id="radio14">
+<button class="idbt" onclick="myFunction14()">Colored Button</button>
+          <input type="text" value=' <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Button
+</button> ' class="data" id="radio15">
+<button class="idbt" onclick="myFunction15()">Accent Button</button>
+           <input type="text" value=' <button class="mdl-button mdl-js-button" disabled>
+  Button
+</button> ' class="data" id="radio16">
+<button class="idbt" onclick="myFunction16()">Flat Button</button>
+           <input type="text" value=' <button class="mdl-button mdl-js-button mdl-button--primary">
+  Button
+</button> ' class="data" id="radio17">
+<button class="idbt" onclick="myFunction17()">Primary Flat Button</button>
+          <input type="text" value=' <button class="mdl-button mdl-js-button mdl-button--accent">
+  Button
+</button> ' class="data" id="radio18">
+<button class="idbt" onclick="myFunction18()">Accent Flat Button</button>
+
+         <input type="text" value=' <button class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">mood</i>
+</button> ' class="data" id="radio19">
+<button class="idbt" onclick="myFunction19()">Icon Button</button>
+<input type="text" value=' <!-- Colored mini FAB button -->
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+  <i class="material-icons">add</i>
+</button> ' class="data" id="radio20">
+<button class="idbt" onclick="myFunction20()">Mini Fab</button>
+         </div>
+<div id="Libraries" class="tabcontent">
+  <input type="text" value=' <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> ' class="data" id="radio21">
+<button class="idbt" onclick="myFunction21()">Material Icons</button>
+
+      <input type="text" value=' <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> ' class="data" id="radio22">
+<button class="idbt" onclick="myFunction22()">MDL JS <i class="wrn material-icons">warning</i></button>
+      <input type="text" value=' <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> ' class="data" id="radio23">
+<button class="idbt" onclick="myFunction24()">MDL CSS <i class="wrn material-icons">warning</i></button>
+      <input type="text" value='     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"> ' class="data" id="radio25">
+<button class="idbt" onclick="myFunction25()">Roboto Font</button>
+      <input type="text" value=' ><script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> ' class="data" id="radio26">
+<button class="idbt" onclick="myFunction26()">Jquery</button>
+
+<input type="text" value=' <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> ' class="data" id="radio21">
+<button class="idbt" onclick="getAngular()">Angular JS</button>
+</div>
+
+<div id="Meta" class="tabcontent">
+<input type="text" value=' <meta charset="utf-8"> ' class="data" id="radio27">
+<button class="idbt" onclick="myFunction27()">Charset <i class="wrn material-icons">warning</i></button>
+
+    <input type="text" value=' <meta http-equiv="X-UA-Compatible" content="IE=edge"> ' class="data" id="radio8">
+<button class="idbt" onclick="myFunction28()">Compatibility <i class="wrn material-icons">warning</i></button>
+
+    <input type="text" value=' <link rel="manifest" href="manifest.json"> ' class="data" id="radio29">
+<button class="idbt" onclick="myFunction29()">Manifest <i class="wrn material-icons">warning</i></button>
+    <input type="text" value=' <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#2d8ae6">
+  <meta name="apple-mobile-web-app-title" content="app_name">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png"> ' class="data" id="radio30">
+<button class="idbt" onclick="myFunction30()">IOS Home Icons</button>
+    <input type="text" value=' <meta name="msapplication-TileImage" content="images/icon.png"> ' class="data" id="radio31">
+<button class="idbt" onclick="myFunction31()">Windows Icons </button>
+        <input type="text" value=' <meta name="msapplication-TileColor" content="#2d8ae6"> ' class="data" id="radio32">
+<button class="idbt" onclick="myFunction32()">Windows Color </button>
+         <input type="text" value=' <meta name="theme-color" content="#000000"> ' class="data" id="radio33">
+<button class="idbt" onclick="myFunction33()">Theme Color <i class="wrn material-icons">warning</i></button>
+</div>
+   <div id="Layout" class="tabcontent">
+
+
+        <input type="text" value=' <button id="demo-menu-lower-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left">
+  <li class="mdl-menu__item">Some Action</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
+  <li disabled class="mdl-menu__item">Disabled Action</li>
+  <li class="mdl-menu__item">Yet Another Action</li>
+</ul> ' class="data" id="radio34">
+<button class="idbt" onclick="myFunction34()">Simple Header</button>
+
+        <input type="text" value=' <button id="demo-menu-top-left"
+        class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="material-icons">more_vert</i>
+</button>
+
+<ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect"
+    data-mdl-for="demo-menu-top-left">
+  <li class="mdl-menu__item">Some Action</li>
+  <li class="mdl-menu__item">Another Action</li>
+  <li disabled class="mdl-menu__item">Disabled Action</li>
+  <li class="mdl-menu__item">Yet Another Action</li>
+</ul> ' class="data" id="radio35">
+<button class="idbt" onclick="myFunction35()">Bottom Header</button>
+
+       <input type="text" value=' <style>
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+</style>
+
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="waterfall-exp">
+        </div>
+      </div>
+    </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here --></div>
+  </main>
+</div> ' class="data" id="radio36">
+<button class="idbt" onclick="myFunction36()">Waterfall Header</button>
+
+       <input type="text" value=' <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
+      <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+  </div>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+      <div class="page-content"><!-- Your content goes here --></div>
+    </section>
+  </main>
+</div>
+ ' class="data" id="radio37">
+<button class="idbt" onclick="myFunction37()">Tabbed Header</button>
+
+       <input type="text" value=' <style>
+.demo-layout-transparent {
+  background: url(img/transparent.jpg) center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+</style>
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+  </main>
+</div> ' class="data" id="radio38">
+<button class="idbt" onclick="myFunction38()">Image Header</button>
+
+
+</div>
+
+<div id="Text" class="tabcontent">
+ <input type="text" value=' <form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="sample1">
+    <label class="mdl-textfield__label" for="sample1">Text...</label>
+  </div>
+</form> ' class="data" id="radio39">
+<button class="idbt" onclick="myFunction39()">Text box</button>
+
+     <input type="text" value=' <form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+    <label class="mdl-textfield__label" for="sample2">Number...</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+</form> ' class="data" id="radio39">
+<button class="idbt" onclick="myFunction39()">Numeric box</button>
+
+     <input type="text" value=' <form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="sample3">
+    <label class="mdl-textfield__label" for="sample3">Text...</label>
+  </div>
+</form> ' class="data" id="radio40">
+<button class="idbt" onclick="myFunction40()">Floating Label</button>
+
+     <input type="text" value=' <form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+</form> ' class="data" id="radio41">
+<button class="idbt" onclick="myFunction41()">Multi-Line</button>
+
+     <input type="text" value=' <form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+    <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+      <i class="material-icons">search</i>
+    </label>
+    <div class="mdl-textfield__expandable-holder">
+      <input class="mdl-textfield__input" type="text" id="sample6">
+      <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+    </div>
+  </div>
+</form> ' class="data" id="radio42">
+<button class="idbt" onclick="myFunction42()">Expanding</button>
+</div>
+
+<div id="Views" class="tabcontent">
+ <input type="text" value=' <iframe src="#"></iframe> ' class="data" id="radio43">
+<button class="idbt" onclick="myFunction43()">WebView</button>
+<input type="text" value=' <img src="img/icon/origami.png"> ' class="data" id="radio44">
+<button class="idbt" onclick="myFunction44()">Image View</button>
+</div>
+    <div id="Cards" class="tabcontent">
+  <input type="text" value=' <style>
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url(img/welcome_card.jpg) center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+</style>
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Welcome</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Mauris sagittis pellentesque lacus eleifend lacinia...
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Get Started
+    </a>
+  </div>
+  <div class="mdl-card__menu">
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">share</i>
+    </button>
+  </div>
+</div> ' class="data" id="radio45">
+<button class="idbt" onclick="myFunction45()">Wide Card</button>
+<input type="text" value=' <style>
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url(img/dog.png) bottom right 15% no-repeat #46B6AC;
+}
+</style>
+
+<div class="demo-card-square mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand">
+    <h2 class="mdl-card__title-text">Update</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Aenan convallis.
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      View Updates
+    </a>
+  </div>
+</div> ' class="data" id="radio46">
+<button class="idbt" onclick="myFunction46()">Square Card</button>
+<input type="text" value=' <style>
+.demo-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url(img/image_card.jpg) center / cover;
+}
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+</style>
+
+<div class="demo-card-image mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">Image.jpg</span>
+  </div>
+</div> ' class="data" id="radio47">
+<button class="idbt" onclick="myFunction47()">Image Card</button>
+<input type="text" value=' <style>
+.demo-card-event.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: #3E4EB8;
+}
+.demo-card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.demo-card-event > .mdl-card__title {
+  align-items: flex-start;
+}
+.demo-card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.demo-card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.demo-card-event > .mdl-card__actions > .material-icons {
+  padding-right: 10px;
+}
+.demo-card-event > .mdl-card__title,
+.demo-card-event > .mdl-card__actions,
+.demo-card-event > .mdl-card__actions > .mdl-button {
+  color: #fff;
+}
+</style>
+
+<div class="demo-card-event mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand">
+    <h4>
+      Featured event:<br>
+      May 24, 2016<br>
+      7-11pm
+    </h4>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Add to Calendar
+    </a>
+    <div class="mdl-layout-spacer"></div>
+    <i class="material-icons">event</i>
+  </div>
+</div> ' class="data" id="radio48">
+<button class="idbt" onclick="myFunction48()">Event Card</button>
+</div>
+<div id="Inline" class="tabcontent">
+  <input type="text" value=' <script language="JavaScript" type="text/javascript" src="#"></script> ' class="data" id="radio49">
+<button class="idbt" onclick="myFunction49()">External JS</button>
+ <input type="text" value=' <script></script> ' class="data" id="radio50">
+<button class="idbt" onclick="myFunction50()">Inline JS</button>
+<input type="text" value=' <link rel="stylesheet" href="#" /> ' class="data" id="radio51">
+<button class="idbt" onclick="myFunction51()">External CSS</button>
+<input type="text" value=' <style></style> ' class="data" id="radio52">
+<button class="idbt" onclick="myFunction52()">Inline CSS</button>
+</div>
+
+<div id="Other" class="tabcontent">
+  <input type="text" value=' <span class="mdl-badge" data-badge="4">Inbox</span> ' class="data" id="radio53">
+<button class="idbt" onclick="myFunction53()">Number Badge</button>
+<input type="text" value=' <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="1">account_box</div> ' class="data" id="radio54">
+<button class="idbt" onclick="myFunction54()">Icon Badge</button>
+<input type="text" value=' null:Not Referenced ' class="data" id="radio55">
+<button class="idbt" onclick="myFunction55()">Default Progress</button>
+<input type="text" value=' <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div> ' class="data" id="radio56">
+<button class="idbt" onclick="myFunction56()">Indeterminate</button>
+<input type="text" value=' <div class="mdl-spinner mdl-js-spinner is-active"></div> ' class="data" id="radio57">
+<button class="idbt" onclick="myFunction57()">Default Spinner</button>
+<input type="text" value=' <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div> ' class="data" id="radio58">
+<button class="idbt" onclick="myFunction58()">Colored Spinner</button>
+
+</div>
+    </div>
+         <script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+        <!--ace-->
+
+         <div id="editor00">
+         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+       <style type="text/css" media="screen">
+    body {
+        overflow: hidden;
+    }
+
+    #editor {
+        height:450px;
+        width: calc(100% - 633px);
+        margin-top:0px;
+        float: left;
+        /*font-family: 'Roboto Mono', monospace;*/
+    }
+
+  </style>
+
+<pre id="editor">
+&lt;!DOCTYPE HTML&gt;
+&lt;head&gt;
+
+
+
+&lt;/head&gt;
+&lt;body&gt;
+
+
+
+&lt;/body&gt;
+</pre>
+
+          <style>
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:transparent;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    border-radius: 2.5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #9e9e9e;
+}
+</style>
+<div id="aceconf">
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/chrome");
+    editor.session.setMode("ace/mode/html");
+    editor.setOptions({
+  fontFamily: "Source Code Pro",
+  fontSize: "13px"
+});
+</script>
+</div>
+<script>
+   editor.commands.addCommand({
+name: 'saveFile',
+bindKey: {
+win: 'Ctrl-S',
+mac: 'Command-S',
+sender: 'editor|cli'
+},
+exec: function(env, args, request) {
+doDL(editor.getSession().getValue());
+}
+});
+
+</script>
+
+</div>
+
+
+<!--<webview id = "foo" src = "editor.html" style =
+            "width:400px; height:480px;">
+            <div class = "indicator"></div>
+         </webview>-->
+
+
+  <!--Emulator-->
+         <div class="vertspacerboi"></div>
+         <div align="right"><div align="center"><div class="emulator"><div align="right" class="controlbar">
+
+
+           <input type="text" id="url" class="input" value="Enter location of file...">  <button onclick="document.getElementById('frame').src = document.getElementById('url').value;" class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="embt material-icons">play_arrow</i>
+</button>
+             <button onclick="emuWindow()" class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="embt material-icons">tap_and_play</i>
+</button>
+
+
+             <button class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="embt material-icons">settings</i>
+</button>
+
+              <button class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="embt material-icons">home</i>
+</button>
+
+              <button class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="embt material-icons">devices_other</i>
+</button>
+
+              <button class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="embt material-icons">loop</i>
+</button>
+
+             <button onclick="emuWindow()" class="mdl-button mdl-js-button mdl-button--icon">
+  <i class="embt material-icons">airplay</i>
+</button>
+
+
+
+</div> <div  id="phone"><div class="phone"><iframe id="frame" class="phrame" src="../open.html"></iframe></div></div></div></div></div>
+
+
+
+             <!--GUI EDITOR
+                     <div align="left">
+                                  <div class="jssedit">
+                                    <div class="cssheader">
+                                      <div class="cssheadertext">
+                                        Function Config tool
+                                      </div>
+                                    </div>
+                                  </div>
+                     </div>-->
+
+
+
+
+
+         <!--</Content>-->
+
+
+
+     <!--GUI EDITOR-->
+
+
+
+    <script>
+      // You can also require other files to run in this process
+      require('js/renderer.js')
+    </script>
+
+</body>
+</html>

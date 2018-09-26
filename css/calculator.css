@@ -1,0 +1,105 @@
+#calculator {
+	width: 317px;
+	height: 420px;
+
+
+
+
+	background-color:#616161;
+}
+
+#txtScreen {
+	float: left;
+	width: 317px;
+	height: 100px;
+	font-size: xx-large;
+	text-align: right;
+	border:none;
+	border-top: 10px solid #ffca28;
+
+}
+
+.numericPad {
+	position: relative;
+	float: left;
+	background-color: #424242;
+}
+
+.btnNum {
+	width: 77px;
+	height: 77px;
+	color: #ffffff;
+	background-color: #424242;
+	border: none;
+	font-size: large;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btnNum:hover {
+	background-color: #464545;
+}
+
+.funtionPad {
+	position: relative;
+	float: left;
+	background-color: #616161;
+}
+
+.btnFuntionPad {
+	width: 60.4px;
+	height: 60.4px;
+	color: #ffffff;
+	background-color: #616161;
+	border: none;
+	font-size: large;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btnFuntionPad:hover {
+	background-color: #ACABAB;
+}
+
+.extraFuntionPad {
+	width: 15.6px;
+	height: 308px;
+	background-color: #ffca28;
+	position: relative;
+	float: right;
+}
+
+.rowsExtraFuntionPad {
+	height: 308px;
+	background-color: #ffca28;
+	position: relative;
+	display: inline-flex;
+	right: 170px;
+	opacity: 0;
+	visibility: hidden;
+	-moz-transition: opacity .5s, visibility .5s;
+	-webkit-transition: opacity .5s, visibility .5s;
+	-o-transition: opacity .5s, visibility .5s;
+	transition: opacity .5s, visibility .5s;
+	transition-timing-function: ease-in;
+}
+
+.extraFuntionPad:hover > .rowsExtraFuntionPad {
+	visibility: visible;
+	opacity: 100;
+}
+
+.btnExtraFuntionPad {
+	width: 61px;
+	height: 61.5px;
+	color: #fff;
+	background-color: #ffca28;
+	border: none;
+	font-size: large;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btnExtraFuntionPad:hover {
+	background-color: #ffca28;
+}

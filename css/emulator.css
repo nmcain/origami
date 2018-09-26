@@ -1,0 +1,91 @@
+.phone{
+background:url("../img/frames/nexus5.png");
+    height:593px;
+    width:293px;
+    float:right;
+   margin-right:50px;
+
+}
+.phrame{
+height:442px;
+    width:250px;
+    border:none;
+    margin-top:56px;
+    margin-right:3px;
+    background:url(../img/icon/error.png);
+}
+.emulator{
+    height:450px;
+
+
+
+
+    float:left;
+
+overflow: auto;
+
+width:400px;
+
+  z-index:14;
+
+
+
+}
+.vertspacerboi{
+     height:450px;
+    width:1px;
+
+
+    z-index:15;
+    float:left;
+}
+.emucont{
+    width:100%;
+    height:35px;
+    background:#FFC107;
+
+}
+
+.phone2{
+background:url("../img/frames/nexus5.png");
+    height:593px;
+    width:293px;
+    float:right;
+   margin-right:50px;
+
+}
+.phrame2{
+height:442px;
+    width:250px;
+    border:none;
+    margin-top:56px;
+    margin-right:3px;
+    background:#fff;
+    background:url(../img/icon/error.png);
+}
+.emulator2{
+    height:100%;
+
+    background:#eee;
+
+    display: inline-block;
+    float:left;
+
+overflow: auto;
+
+width:100%;
+    margin: auto;
+
+
+
+
+}
+.input2{
+    margin-left:5px;
+    margin-top:2px;
+    width:140px;
+    border:none;
+    height:28px;
+    margin-top:2px;
+    background:#eeeeee;
+}

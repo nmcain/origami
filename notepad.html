@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Notepad | Online Notepad free, no login required</title>
+	<meta name="description" content="Online notepad. Free online notes app. No login required, no sign up required.">
+	<meta property="og:type" content="website" />
+	<meta property="og:image" itemprop="image" content="https://www.rapidtables.com/lib/ogimages/notepad.jpg" />
+	<meta property="og:url" content="https://www.rapidtables.com/tools/notepad.html"/>
+	<meta property="og:title" content="Notepad online" />
+    <meta property="og:description" itemprop="description" content="Notepad online free app." />
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/lib/favicon/notepad/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/lib/favicon/notepad/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/lib/favicon/notepad/favicon-16x16.png">
+	<link rel="manifest" href="/lib/favicon/notepad/manifest.json">
+	<link rel="mask-icon" href="/lib/favicon/notepad/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/lib/favicon/notepad/favicon.ico">
+	<meta name="msapplication-config" content="/lib/favicon/notepad/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script>
+    <style>
+		html, body {
+			margin:0;
+			height:100%;
+			width:100%;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		#old_div {
+			height:30px !important;
+			padding-top: 10px;
+		}
+		#old_div a {
+			color:red;
+			text-decoration:none;
+			margin-top:30px;
+			margin-left:0px;
+			padding:20px;
+		}
+		#old_div i {
+			font-size:16px;
+			margin-top:-10px;
+			padding:10px;
+			vertical-align:top;
+		}
+		#old_div i:hover { font-weight:bold; }
+		#header {
+			/*padding-left:20px;*/
+			background:#444;
+		}
+		.sdiv
+		{
+			display:inline-block;
+			vertical-align:middle;
+			margin-left:20px;
+			margin-right:40px;
+		}
+		#ad_div { margin-left:0; }
+		@media (max-width:720px) {
+			.sdiv { margin-top:10px; margin-bottom:10px; }
+			#ad_div { width:320px; padding-bottom:10px; display:none; }
+			.adslot { max-width:320px; }
+		}
+		@media (min-width:721px) and (max-width:1024px) {
+			#header { line-height:60px; }
+			/*#addthis { display:none; }*/
+			#ad_div { width:468px; }
+			.adslot { max-width:468px; }
+		}
+		@media (min-width:1025px) {
+			#header { /*height:60px;*/ line-height:60px; }
+			/*#addthis { display:inline-block; }*/
+			#ad_div { width:468px; margin-left:80px; }
+			.adslot { max-width:468px; }
+		}
+		#bread { color:#ddd; font-size:medium; vertical-align:middle; margin-bottom:auto; }
+		#bread a { color:#ddd; text-decoration:none; padding:20px 5px; }
+		#bread a:hover { color:#fff; background:#333; }
+
+		#toolbar {
+			background:#ddd;
+			margin:0;
+			padding-left:20px;
+		}
+		#toolbar button {
+			margin:0;
+			border:0;
+			padding:5px 10px;
+		}
+		#toolbar button:hover {
+			background:#eee;
+		}
+		#toolbar button i {
+			font-size:xx-large;
+			color:#555;
+		}
+		@media all and (max-width: 576px) {
+			#toolbar table tr td:nth-child(-n+3),
+			#toolbar table tr td:nth-child(n+9) { display:none }
+			#addthis, #sub { display:none }
+		}
+
+		#main {
+			margin:0;
+			padding:0px 0px 20px 0px;
+			height: 90%;
+			/*overflow-x: hidden;*/
+		}
+		textarea {
+			height:100%;
+			width:90%;
+			width:calc(100% - 54px);
+			margin:0;
+			padding-top:3px;
+			padding-left:50px;
+			background:#fdf8c8;
+			font-family:verdana;
+		    font-family: Arial, Helvetica, Sans-serif;
+			font-size:large;
+			outline: none;
+		}
+		.notes {
+
+		    line-height: 25px !important;
+		    background-attachment: local;
+		}
+		#bar { padding-left:20px; }
+		@media (max-width:576px) {
+			#main { height: calc(100% - 140px); padding:0; }
+		}
+		@media (min-width:577px) {
+			#main { height: calc(100% - 175px); }
+		}
+
+		table,th,td,tr {
+			border-width: 0px;
+			border-collapse:collapse;
+			padding:0px;
+			margin:0px;
+		}
+		#menu2 { background:#ccc; }
+		#menu2 .mdl-button:hover { background:#ddd; }
+		#menu2 .mdl-menu__outline { background:#f8f8f8; }
+		#menu2>ul {
+    		list-style-type: none;
+    		margin: 0;
+    		margin-left:10px;
+    		padding: 0;
+    		overflow: hidden;
+    		/*width: 90px;*/
+		}
+		#menu2>ul>li {
+			float:left;
+    		display: inline-block;
+		}
+		#menu2>ul>li>button,
+		#menu2>ul>li>a {
+			padding:0 8px;
+    		text-transform:none;
+    		font-size:medium;
+		}
+		#menu2>ul>li i { margin-right:10px; }
+		/*#menu2>ul>li>ul>li>a {*/
+		#menu2 .mdl-menu__item {
+			height:34px;
+			line-height:34px;
+			display: inline-flex;
+			vertical-align: middle;
+			align-items: center;
+			width:100%;
+		}
+		#menu2 .mdl-menu__item i {
+			color:#444;
+		}
+		#tlines { visibility:hidden; }
+	</style>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2665076-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-2665076-2');
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+	  "palette": {
+	    "popup": {
+	      "background": "#f0f0d0",
+	      "text": "#333333"
+	    },
+	    "button": {
+	      "background": "#b0b080",
+	      "text": "#333"
+	    }
+	  },
+	  "content": {
+	    "message": "This website uses cookies. By using this website you accept the use of cookies.",
+	    "href": "https://www.rapidtables.com/about/privacy.html"
+	  }
+	})});
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<div class="sdiv">
+			<p id="bread"><a href="/">Home</a>&rsaquo;<a href="index.html">Tools</a>&rsaquo; Notepad</p>
+		</div>
+		<!-- AddThis Button BEGIN -->
+		<!--<div id="addthis" class="addthis_sharing_toolbox sdiv"></div>-->
+		<!-- AddThis Button END -->
+		<div class="sdiv" id="ad_div">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- RT above responsive -->
+			<ins class="adsbygoogle adslot"
+			     style="display:block"
+			     data-ad-client="ca-pub-5335356106950684"
+			     data-ad-slot="6506963100"
+			     data-ad-format="horizontal"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	</div>
+	<div id="menu2">
+		<ul>
+			<li>
+				<button id="menu-file" class="mdl-button mdl-js-button">File</button>
+				<ul class="mdl-menu mdl-menu-top-left mdl-js-menu mdl-js-ripple-effect" for="menu-file">
+					<li><a onclick="New()"	href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">insert_drive_file</i><span>New</span></a></li>
+					<li><a onclick="Open()"	href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">folder_open</i>Open</a></li>
+					<li><a onclick="Save()"	href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">save</i>Save</a></li>
+					<li><a onclick="Save_As()"	href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">save</i>Save As...</a></li>
+					<li><a onclick="Print()"	href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">print</i>Print</a></li>
+				</ul>
+			</li>
+			<li>
+				<button id="menu-edit" class="mdl-button mdl-js-button">Edit</button>
+				<ul class="mdl-menu mdl-menu-top-left mdl-js-menu mdl-js-ripple-effect" for="menu-edit">
+					<li><a onclick="Undo()"		href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">undo</i><span>Undo</span></a></li>
+					<li><a onclick="Redo()"		href="javascript:void(0);" class="mdl-menu__item mdl-menu__item--full-bleed-divider"><i class="material-icons">redo</i><span>Redo</span></a></li>
+					<li><a onclick="Cut()"		href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">content_cut</i><span>Cut</span></a></li>
+					<li><a onclick="Copy()"		href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">content_copy</i><span>Copy</span></a></li>
+					<li><a onclick="Paste()"	href="javascript:void(0);" class="mdl-menu__item mdl-menu__item--full-bleed-divider"><i class="material-icons">content_paste</i><span>Paste</span></a></li>
+					<li><a onclick="Del()"		href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">clear</i><span>Delete</span></a></li>
+					<li><a onclick="SelectAll()" href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">select_all</i><span>Select All</span></a></li>
+				</ul>
+			</li>
+			<li>
+				<button href="#" id="menu-view" class="mdl-button mdl-js-button">View</button>
+				<ul class="mdl-menu mdl-menu-top-left mdl-js-menu mdl-js-ripple-effect" for="menu-view">
+					<li><a onclick="IncSize()" href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">zoom_in</i>Zoom In</a></li>
+					<li><a onclick="DecSize()" href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons">zoom_out</i>Zoom Out</a></li>
+					<li><a onclick="TextLines()" href="javascript:void(0);" class="mdl-menu__item"><i class="material-icons" id="tlines">check</i>Text Lines</a></li>
+				</ul>
+			</li>
+			<!--<li><a href="notepad_help.html" id="menu-edit" class="mdl-button mdl-js-button">Help</a></li>-->
+			<li>
+				<button href="#" id="menu-help" class="mdl-button mdl-js-button">Help</button>
+				<ul class="mdl-menu mdl-menu-top-left mdl-js-menu mdl-js-ripple-effect" for="menu-help">
+					<li><a href="notepad_help.html" class="mdl-menu__item"><i class="material-icons">help</i><span>Help</span></a></li>
+					<li><a href="notepad_help.html#feedback" class="mdl-menu__item"><i class="material-icons">feedback</i><span>Send feedback</span></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="toolbar">
+		<table>
+		<tr>
+			<td><button type="button" name="B1" title="New"		onClick="New()"><i class="material-icons">insert_drive_file</i></button></td>
+			<td><button type="button" name="B2" title="Open"	onClick="Open()"><i class="material-icons">folder_open</i></button></td>
+			<td><button type="button" name="B3" title="Save"	onClick="Save()"><i class="material-icons">save</i></button></td>
+			<td><button type="button" name="B4" title="Cut"		onClick="Cut()"><i class="material-icons">content_cut</i></button></td>
+			<td><button type="button" name="B5" title="Copy"	onClick="Copy()"><i class="material-icons">content_copy</i></button></td>
+			<td><button type="button" name="B6" title="Paste"	onClick="Paste()"><i class="material-icons">content_paste</i></button></td>
+			<td><button type="button" name="B7" title="Undo"	onClick="Undo()"><i class="material-icons">undo</i></button></td>
+			<td><button type="button" name="B8" title="Redo"	onClick="Redo()"><i class="material-icons">redo</i></button></td>
+			<td><button type="button" name="B9" title="Zoom Out" onClick="DecSize()"><i class="material-icons">zoom_out</i></button></td>
+		    <td><button type="button" name="B10" title="Zoom In" onClick="IncSize()"><i class="material-icons">zoom_in</i></button></td>
+			<td><input type="file" multiple id="fileElem" name="fileElem[]" style="visibility:hidden; width:30px" onchange="loadFile()"></td>
+		</tr>
+		</table>
+		<table>
+		<tr id="getFilename" style="display:none">
+			<td>Enter file name:</td>
+			<td><input type="text" id="filename" name="filename" placeholder="filename.txt" style="width:150px; padding:5px;"></td>
+			<td><input type="button" id="save" name="save" value="Save" onclick="saveFile()" style="padding:5px 10px 5px 10px; margin:0px"></td>
+			<td><input type="button" id="cancel" name="cancel" value="Cancel" onclick="cancelSaveFile()" style="padding:5px; margin:0px"></td>
+		</tr>
+		</table>
+	</div>
+	<!--
+	<div id="old_div">
+			<i class="material-icons">clear</i>
+			<a href="http://www.rapidtables.com/tools/notepad-old.html">Click to get your text from old page</a>
+	</div>
+	-->
+	<div id="main">
+		<textarea id="area" name="S1" autofocus></textarea>
+		<div id="bar"></div>
+	</div>
+
+<script src="js/utils.js"></script>
+<script src="js/blob.js"></script>
+<script src="js/filesaver.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/core.js"></script>
+
+</body>
+
+</html>

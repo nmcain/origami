@@ -1,0 +1,1230 @@
+body {
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+  background-image:url('../img/wallpaper/2.png');
+  background-size:cover;
+    overflow:hidden;
+    
+}
+.navbar {
+  overflow: hidden;
+  margin:0;
+   z-index:15;
+  position: fixed;
+  width: 100%;
+  height:50px;
+    bottom: 0;
+  
+  background-color: transparent;
+}
+.menuicon{
+  border-radius:100%;
+  background:rgba(0, 0, 0, 0.55);
+  height:30px;
+  width:30px;
+  float:left;
+  margin-top:10px;
+  margin-left:10px;
+}
+.chromeicon{
+   border-radius:100%;
+  background:url('../img/icons/chrome.png');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+    border:none;
+}
+.demoicon{
+    border-radius:100%;
+  background:url('../img/icons/demo.svg');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+}
+.playicon{
+   border-radius:100%;
+  background:url('../img/icons/playstore.png');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+}
+.origamiicon{
+
+  background:url('../img/icons/alt.png');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+}
+.settingsicon{
+    border-radius:100%;
+  background:url('../img/icons/settings.png');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+}
+.driveicon{
+    
+  background:url('../img/icons/drive.png');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+}
+.weathericon{
+    
+  background:url('../img/icons/weather.png');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+}
+.launcherico{
+  color:#eeeeee;
+margin-top:3px;
+margin-left:0px;
+font-size:20px;
+
+font-weight:bold;
+
+}
+.docsicon{
+  background:url('../img/icons/docs.png');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+}
+.terminalicon{
+  background:url('../img/icons/terminal.png');
+  background-size:cover;
+  height:35px;
+  width:35px;
+  float:left;
+  margin-top:7.5px;
+  margin-left:20px;
+}
+.usermenu{
+  background:rgba(0, 0, 0, 0.55);
+  height:35px;
+  float:right;
+  border-radius:3px;
+  width:150px;
+  margin-top:7.5px;
+  margin-left:10px;
+  margin-right:7.5px;
+}
+.notifymenu{
+  margin-top:7.5px;
+  border:none;
+  height:35px;
+  width:35px;
+  background:rgba(0, 0, 0, 0.55);
+  border-radius:3px;
+  float:right;
+}
+.notif{
+  color:#EEEEEE;
+  margin-top:3px;
+    margin-left:1px;
+  font-size:15px;
+}
+.material-icons.md-10 { font-size: 10px; }
+.material-icons.md-15 { font-size: 15px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+#txt{
+    color:#eeeeee;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+}
+
+.useroicon{
+    float:left;
+    margin-top:4px;
+    color:#eee;
+    font-size:15px;
+    font-weight:bold;
+    margin-left:6px;
+}
+
+.usericonmenu{
+   float:left;
+    color:#ffca28;
+    font-size:15px;
+    font-weight:bold;
+    margin-left:6px;
+}
+/*no-mdl ripple*/
+.ripple {
+  position: relative;
+  overflow: hidden;
+    border:none;
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.other{
+    bottom:0;
+    position:fixed;
+    z-index:16;
+    margin-left:-355px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom:50px;
+}
+
+.main25 {
+  height: 420px; /* Used in this example to enable scrolling */
+ background:#eee;
+ width:350px;
+ border-radius:2px;
+ 
+}
+ .other {
+  height: 460px; /* Used in this example to enable scrolling */
+  width:350px;
+  border-radius:3px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.42); 
+box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.42);
+ background:#eee;
+}
+   
+    .user{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      border-radius:2px;
+      background:#fff;
+    }
+    .icon{
+      float:left;
+      border-radius:100%;
+      height:40px;
+      width:40px;
+      margin-top:5px;
+      margin-left:5px;
+      background:url('../img/sf.png');
+        background-size:cover;
+        
+       
+    }
+    .username{
+      float:left;
+      font-size:15px;
+      color:#222222;
+      font-weight:thin;
+      margin-top:15px;
+      margin-left:15px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .user > .mdbt{
+      margin-top:7px;
+      margin-right:8px;
+        border-left:1px solid #444 ;
+        color:#444;
+        font-family: 'Roboto', sans-serif;
+    }
+       
+   
+  
+    .kb{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#fff;
+    }
+     .kb:hover{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#eee;
+     }
+    .kbicon{
+      float:left;
+      font-size:30px;
+      color:#757575;
+      font-weight:thin;
+      margin-top:10px;
+      margin-left:10px;
+    }
+    .grow{
+      float:left;
+      margin-top:15px;
+      font-size:15px;
+      margin-left:15px;
+      color:#212121;
+    }
+     .grow2{
+      float:left;
+      margin-top:15px;
+      font-size:20px;
+      margin-left:150px;
+      color:#212121;
+    }
+       
+     
+    .wifi{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#fff;
+    }
+     .wifi:hover{
+          width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#eee;
+    }
+    .wificon{
+      float:left;
+      font-size:30px;
+      color:#757575;
+      font-weight:thin;
+      margin-top:10px;
+      margin-left:10px;
+    }
+    .grow3{
+      float:left;
+      margin-top:15px;
+      font-size:15px;
+      margin-left:15px;
+      color:#212121;
+    }
+     .grow4{
+      float:left;
+      margin-top:15px;
+      font-size:20px;
+      margin-left:175px;
+      color:#212121;
+    }
+       
+    
+    
+    .bt2{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#fff;
+    }
+     .bt2:hover{
+          width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#eee;
+    }
+    .bticon{
+      float:left;
+      font-size:30px;
+      color:#757575;
+      font-weight:thin;
+      margin-top:10px;
+      margin-left:10px;
+    }
+    .grow5{
+      float:left;
+      margin-top:15px;
+      font-size:15px;
+      margin-left:15px;
+      color:#212121;
+    }
+     .grow6{
+      float:left;
+      margin-top:15px;
+      font-size:20px;
+      margin-left:170px;
+      color:#212121;
+    }
+       
+    
+    
+    .cast{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#fff;
+    }
+     .cast:hover{
+          width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#eee;
+    }
+    .casticon{
+      float:left;
+      font-size:30px;
+      color:#757575;
+      font-weight:thin;
+      margin-top:10px;
+      margin-left:10px;
+    }
+    .growcast{
+      float:left;
+      margin-top:15px;
+      font-size:15px;
+      margin-left:15px;
+      color:#212121;
+    }
+     .growcast2{
+      float:left;
+      margin-top:15px;
+      font-size:20px;
+      margin-left:205px;
+      color:#212121;
+    }
+       
+    
+  
+    .volume_up{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#fff;
+    }
+     .volume_up:hover{
+          width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#eee;
+    }
+    .volume_upicon{
+      float:left;
+      font-size:30px;
+      color:#757575;
+      font-weight:thin;
+      margin-top:10px;
+      margin-left:10px;
+    }
+    .spacerv{
+    height:15px;
+    width:200px;
+    }
+       
+    
+       
+    .settings{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#fff;
+    }
+     .settings:hover{
+          width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#eee;
+    }
+    .settings2icon{
+      float:left;
+      font-size:30px;
+      color:#757575;
+      font-weight:thin;
+      margin-top:10px;
+      margin-left:10px;
+    }
+    .settingscast{
+      float:left;
+      margin-top:15px;
+      font-size:15px;
+      margin-left:15px;
+      color:#333;
+    }
+     .settingscast2{
+      float:left;
+      margin-top:15px;
+      font-size:20px;
+      margin-left:180px;
+      color:#333;
+    }
+       
+    
+   
+    .notify{
+      width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#fff;
+    }
+     .notify:hover{
+          width:350px;
+      border-bottom:1px solid #eee;
+      height:50px;
+      background:#eee;
+    }
+    .notifyicon{
+      float:left;
+      font-size:30px;
+      color:#757575;
+      font-weight:thin;
+      margin-top:10px;
+      margin-left:10px;
+    }
+    .notifycast{
+      float:left;
+      margin-top:15px;
+      font-size:15px;
+      margin-left:15px;
+      color:#333;
+    }
+     .notifycast2{
+      float:left;
+      margin-top:15px;
+      font-size:20px;
+      margin-left:150px;
+      color:#333;
+    }
+       
+    
+   
+    .final{
+      width:350px;
+      
+      
+        color:#222;
+    }
+    .menuicons{
+      color:#757575;
+      font-size:30px;
+      margin-right:5px;
+      margin-top:5px;
+        
+    } 
+    .date{
+      float:left;
+      font-size:15px;
+      color:#757575;
+      margin-top:10px;
+      margin-left:15px;
+    }
+
+
+.smallmenu{
+    background:rgba(0, 0, 0, 0.85);
+    width:100%;
+    height:400px;
+        bottom:0;
+    position:absolute;
+     z-index:15;
+}
+.gsearchbar{
+    background:#F6FAFB;
+    height:50px;
+    width:550px;
+    font-family:Roboto, sans-serif;
+    border-radius:25px;
+    border:none;
+    margin-top:20px;
+    
+}
+.gicon{
+    background:url('../img/icons/gicon_black.svg');
+background-size:20px;
+    height:20px;
+    width:20px;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+}  
+.gsearchbar:hover .gicon{
+    background:url('../img/icons/gicon.svg');
+background-size:20px;
+    height:20px;
+    width:20px;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+}  
+
+.searchtxt{
+    font-size:15px;
+    padding:12px;
+}
+.application{
+                    font-family:Roboto, sans-serif;
+                    color:#fff;
+                    height:100px;
+                    width:100px;
+                    float:left;
+                    margin-top:20px;
+                }
+                 .application:hover{
+                    font-family:Roboto, sans-serif;
+                    color:#fff;
+                    height:100px;
+                    width:100px;
+                    float:left;
+                     background:rgba(255,255,255,0.2);
+                     border-radius:5px;
+                     
+                }
+                .application:active{
+                    font-family:Roboto, sans-serif;
+                    color:#fff;
+                    height:100px;
+                    width:100px;
+                    float:left;
+                     background:rgba(255,255,255,0.3);
+                     border-radius:5px;
+                     
+                }
+                .appicon-chrome{
+                    background:url('../img/icons/chrome.png');
+background-size:45px;
+    height:45px;
+    width:45px;
+    
+    margin-top:15px;
+     margin-bottom:10px;
+                }
+.appicon-terminal{
+                    background:url('../img/icons/terminal.png');
+background-size:45px;
+    height:45px;
+    width:45px;
+    
+    margin-top:15px;
+     margin-bottom:10px;
+                }
+                 .appicon-ogtest{
+                    background:url('../img/icons/demo.svg');
+background-size:45px;
+    height:45px;
+    width:45px;
+    
+    margin-top:15px;
+    margin-bottom:10px;
+                }
+                .appicon-playstore{
+                    background:url('../img/icons/playstore.png');
+background-size:45px;
+    height:45px;
+    width:45px;
+     margin-bottom:10px;
+    margin-top:15px;
+    
+                }
+                .appicon-origami{
+                    background:url('../img/icons/alt.png');
+background-size:45px;
+    height:45px;
+    width:45px;
+    
+    margin-top:15px;
+     margin-bottom:10px;
+                }
+                .appicon-weather{
+                    background:url('../img/icons/weather.png');
+background-size:45px;
+    height:45px;
+    width:45px;
+    
+    margin-top:15px;
+   margin-bottom:10px;
+                }
+                .appscontainer{
+                     z-index:15;
+                    height:100px;
+                    width:500px;
+                }
+                .expandbiglauncher{
+                    bottom:0;
+                    
+                    position:absolute;
+                    margin-bottom:100px;
+                    width:40px;
+                    height:40px;
+                    border-radius:100%;
+                    margin-left:calc(50% - 20px);
+                    background:rgba(255,255,255,0.3);
+                }
+                .expandbiglauncher:hover{
+                    background:rgba(255,255,255,0.4);
+                }
+                 .expandbiglauncher:active{
+                    background:rgba(255,255,255,0.5);
+                }
+                .expandicon{
+                    color:#fff;
+                    margin-top:7px;
+                    cursor:pointer;
+                }
+
+
+
+
+#mydiv {
+    position: absolute;
+    z-index: 14;
+    background-color: #eeeeee;
+    height:600px;
+    width:1000px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    
+}
+
+#mydiv2header {
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    
+    color: #fff;
+}
+#mydiv2 {
+    position: absolute;
+    z-index: 14;
+    background-color: #eeeeee;
+    height:600px;
+    width:1000px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    
+}
+
+#mydivheader {
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #333333;
+    color: #fff;
+}
+.chromeframe{
+    border:none;
+    height:100%;
+    width:100%;
+}
+.window{
+   float:right;
+    color:#eee;
+    padding:8px;
+    cursor:pointer;
+}
+.windowmin{
+   float:right;
+    color:#eee;
+    
+    cursor:pointer;
+    margin-right:8px;
+    margin-left:8px;
+    margin-top:13px;
+}
+.hovercircle:hover{
+   border-radius:100%;
+     background:rgba(255,255,255,0.2);
+    
+}
+.hovercircle{
+    float:right;
+    height:35px;
+    width:35px;
+   
+}
+ .bigmenu{
+    background:rgba(0, 0, 0, 0.85);
+    width:100%;
+    height:100%;
+        bottom:0;
+    position:absolute;
+         z-index:14;
+    
+}
+        .gsearchbar2{
+    background:#F6FAFB;
+    height:50px;
+    width:550px;
+    font-family:Roboto, sans-serif;
+    border-radius:25px;
+    border:none;
+    margin-top:20px;
+    margin-top:150px;
+             z-index:15;
+}
+.gicon2{
+    background:url('../img/icons/gicon_black.svg');
+background-size:20px;
+    height:20px;
+    width:20px;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+     z-index:15;
+}  
+.gsearchbar2:hover .gicon2{
+    background:url('../img/icons/gicon.svg');
+background-size:20px;
+    height:20px;
+    width:20px;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+}  
+        
+.searchtxt2{
+    font-size:15px;
+    padding:12px;
+     z-index:15;
+}
+        .allapps{
+            background:rgba(255,255,255,0.3);
+            height:20px;
+            width:75px;
+            border-radius:10px;
+            margin-top:30px;
+        }
+        .pillname{
+            color:#e0e0e0;
+            font-family:Roboto, sans-serif;
+            font-size:10px;
+            margin-top:-2px;
+        }
+         .appscontainer2{
+                    z-index:15;
+                    height:100px;
+                    width:500px;
+                }
+        .appscontainer3{
+                     z-index:15;
+                    height:100px;
+                    width:500px;
+                }
+        .appicon-docs{
+                    background:url('../img/icons/docs.png');
+background-size:45px;
+    height:45px;
+    width:45px;
+    
+    margin-top:15px;
+   margin-bottom:10px;
+                }
+        .appicon-drive{
+                    background:url('../img/icons/drive.png');
+background-size:45px;
+    height:45px;
+    width:45px;
+    
+    margin-top:15px;
+   margin-bottom:10px;
+                }
+        .appicon-settings{
+                    background:url('../img/icons/settings.png');
+background-size:45px;
+    height:45px;
+    width:45px;
+    
+    margin-top:15px;
+   margin-bottom:10px;
+                }
+
+
+
+
+
+
+#preview {
+    position: absolute;
+    z-index: 14;
+    background-color: #eeeeee;
+    height:600px;
+    width:1000px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    
+}
+
+#previewheader {
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #F1F1F1;
+    color: #fff;
+}
+#previewheader .material-icons{
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #F1F1F1;
+    color: #757575;
+}
+
+
+
+
+#frame{
+    height:100%;
+    width:100%;
+    border:none;
+}
+#frame2{
+    height:100%;
+    width:100%;
+    border:none;
+}
+
+#origami {
+    position: absolute;
+    z-index: 14;
+    background-color: #eeeeee;
+    height:600px;
+    width:1125px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    
+}
+
+#origamiheader {
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #FFA000;
+    color: #fff;
+}
+
+#origamiopen {
+    position: absolute;
+    z-index: 14;
+    background-color: #eeeeee;
+    height:600px;
+    width:1000px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    
+}
+
+#origamiopenheader {
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #FFA000;
+    color: #fff;
+}
+.topheader{
+    width:100%;
+    height:55px;
+    color:#fff;
+    background:#FFC107;
+    font-family:Roboto, sans-serif;
+}
+.headertext{
+    color:#fff;
+    font-size:17px;
+    padding:14px;
+}
+.opencard{
+     -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    width:600px;
+    min-height:100px;
+    border-radius:4px;
+    background:#fff;
+    margin-bottom:20px;
+}
+.sector{
+    width:600px;
+    
+}
+.cardtitle{
+    margin-top:30px;
+    margin-bottom:10px;
+    color:#222;
+    font-family:Roboto, sans-serif;
+}
+.wicon{
+    color:#FFA000;
+    padding:28px;
+    float:left;
+}
+.input{
+    background:#eeeeee;
+    border:none;
+    padding:16px;
+    border-radius:3px;
+    margin:30px;
+}
+.embt{
+    color:#4caf50;
+}
+.fakedocs{
+    height:100%;
+    width:100%;
+    
+}
+.playstoretitle{
+      font-family: 'product_sansregular', sans-serif;
+    color:#333;
+    font-size:30px;
+}
+#playstore {
+    position: absolute;
+    z-index: 14;
+    background-color: #fff;
+    height:575px;
+    width:850px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    
+}
+
+#playstoreheader {
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #ffffff;
+    color: #fff;
+}
+#playstoreheader .material-icons{
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #ffffff;
+    color: #757575;
+}
+.psimg{
+    background:url(../img/icons/playstore.png);
+   background-size:150px;
+    height:150px;
+    width:150px;
+    margin:60px;
+}
+.playstoresub{
+    color:#777777;
+    font-size:20px;
+    font-family: 'product_sansregular', sans-serif;
+    width:520px;
+    margin-top:20px;
+}
+.playstoreerr{
+    color:#f44336;
+    font-size:15px;
+    font-family: 'product_sansregular', sans-serif;
+    
+    margin-top:20px;
+}
+#playstore .psbtn{
+    font-family: 'product_sansregular', sans-serif;
+    margin-top:40px;
+    text-transform: none;
+}
+
+
+
+
+
+
+#settings {
+    position: absolute;
+    z-index: 14;
+    background-color: #eeeeee;
+    height:600px;
+    width:1000px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    overflow:scroll;
+    
+  
+    
+}
+
+#settingsheader {
+    height:35px;
+    overflow: hidden;
+  margin:0;
+   
+  position: fixed;
+  width:1000px;
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #254FAE;
+    color: #fff;
+   
+}
+.topheadersettings{
+   margin-top:35px;
+    overflow: hidden;
+  
+  
+  position: fixed;
+  width: 100%;
+    width:100%;
+    height:55px;
+    color:#fff;
+    background:#3367D6;
+    font-family:Roboto, sans-serif;
+    
+}
+.network{
+    margin-top:100px;
+   
+}
+.abouttxt{
+    font-family: 'Roboto', sans-serif;
+    color:#222;
+    font-size:20px;
+    float:left;
+    margin:18px;
+}
+.iconabout{
+    background:url('../img/icons/chrome.png');
+background-size:40px;
+    height:40px;
+    width:40px;
+    float:left;
+    margin:10px;
+    
+}
+.separator-eee{
+    background:#eee;
+    width:600px;
+    height:1px;
+    margin-top:65px;
+    position:absolute;
+}
+.versiontxt{
+    font-size:15px;
+    font-family: 'Roboto', sans-serif;
+    color:#333;
+    position:absolute;
+    margin:20px;
+    margin-top:85px;
+}
+.opencard2{
+     -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    width:600px;
+    min-height:400px;
+    border-radius:4px;
+    background:#fff;
+    margin-bottom:20px;
+}
+.separator-eee2{
+    background:#eee;
+    width:600px;
+    height:1px;
+        margin-top:130px;
+    position:absolute;
+}
+.versionflags1{
+     font-size:15px;
+    font-family: 'Roboto', sans-serif;
+    color:#111;
+    position:absolute;
+    margin:20px;
+    margin-top:135px;
+    width:500px;
+}
+.versionflags{
+     font-size:14px;
+    font-family: 'Roboto', sans-serif;
+    color:#333;
+    position:absolute;
+    margin:20px;
+    margin-top:160px;
+    width:500px;
+}
+#crosh {
+    position: absolute;
+    z-index: 14;
+    background-color: #eeeeee;
+    height:600px;
+    width:1000px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    
+}
+
+#croshheader {
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #F1F1F1;
+    color: #fff;
+}
+#croshheader .material-icons{
+    height:35px;
+    
+    border-radius:3px 3px 0px 0px;
+    z-index: 14;
+    background-color: #F1F1F1;
+    color: #757575;
+}

@@ -1,0 +1,65 @@
+.controls{
+background:#29b6f6;
+}
+.toolbar{
+background:#e0e0e0;
+border-bottom:1px solid #e0e0e0;
+}
+.idbt{
+    border:none;
+    background:#e0e0e0;
+}
+.idbt:hover{
+    border:none;
+    background:#dddddd;
+}
+.idbt:active{
+    border:none;
+    background:#cccccc;
+}
+.tab {
+ border-right:1px solid #BDBDBD;
+    background-color: #eeeeee;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: transparent;
+    color: black;
+}
+.tab button:hover {
+    background-color: #ddd;
+}
+.tab button.active {
+    background-color: #ccc;
+    border-radius:0px 15px 15px 0px;
+}
+.tabcontent {
+    border-right:1px solid #BDBDBD;
+}
+.dropdown:hover .dropbtn {background-color: #03a9f4;}
+.dropdown2:hover .dropbtn2 {background-color: #03a9f4;}
+.dropdown3:hover .dropbtn3 {background-color: #03a9f4;}
+.dropdown4:hover .dropbtn4 {background-color: #03a9f4;}
+.dropdown5:hover .dropbtn5 {background-color: #03a9f4;}
+.dropdown6:hover .dropbtn6 {background-color: #03a9f4;}
+.dropdown65:hover .dropbtn65 {background-color: #03a9f4;}
+body {
+    background:#eeeeee;
+}
+#title-bar {
+ background-color: #03a9f4;
+}
+#title {
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
+}
+#title-bar-btns {
+    color:#ffffff;
+}
+.btn{
+    background:transparent;
+}
+.btn:hover{
+    background:#29b6f6;
+}
